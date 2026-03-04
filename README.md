@@ -1,4 +1,4 @@
-# ✔️ Fluent Corp Aplicativo De Idiomas
+# 🗣️ $\color{purple}{\text{Fluent Corp | Aplicativo de Idiomas}}$ 📱
 
 *Integrantes do grupo:*  
 - Bruney Mota Trindade    
@@ -7,13 +7,13 @@
 - Maria Eduarda Natal Comelli 
 
 
-## 🚀 Projeto Node.js + Sequelize + Flutter
+## 🛠️ Projeto Node.js + Sequelize + Flutter
 
 #### Este projeto consiste em um backend desenvolvido em Node.js com Sequelize para interação com o banco de dados e um frontend em Flutter.
 
-## ⚙️ Pré-requisitos
+## 📋 Pré-requisitos
 
-🔗 *Antes de começar, certifique-se de ter instalado em sua máquina:*  
+⚠️ *Antes de começar, certifique-se de ter instalado em sua máquina:*  
 
 ✔️ **Git**\
 ✔️ **Node.js (versão recomendada: 16.x ou superior)**\
