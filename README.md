@@ -1,10 +1,11 @@
 # 🗣️ $\color{purple}{\text{Fluent Corp | Aplicativo de Idiomas}}$ 📱
 
-*Integrantes do grupo:*  
-- Bruney Mota Trindade    
-- Joao Caio Da Silva Santos  
-- Maria Eduarda Alves Gaia
-- Maria Eduarda Natal Comelli 
+   *Integrantes do grupo:*  
+   
+-👨🏻‍🎓 Bruney Mota Trindade    
+-👨🏻‍🎓 Joao Caio Da Silva Santos  
+-👩🏻‍🎓 Maria Eduarda Alves Gaia  
+-👩🏻‍🎓 Maria Eduarda Natal Comelli 
 
 
 ## 🛠️ Projeto Node.js + Sequelize + Flutter
