@@ -1,4 +1,4 @@
-# ✔️ Aplicação Idiomas
+# ✔️ Fluent Corp Aplicativo De Idiomas
 
 *Integrantes do grupo:*  
 - Bruney Mota Trindade    
