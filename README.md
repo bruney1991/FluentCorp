@@ -29,13 +29,13 @@ git clone https://github.com/bruney1991/FluentCorp
 cd APP_IDIOMAS
 ```
 
-### Instalar dependencias
-### **Passo 1: Instalar Sequelize e CLI localmente no projeto**
+### 📥 Instalar dependencias
+### **1️⃣ Instalar Sequelize e CLI localmente no projeto**
 
 ```bash
 npm install sequelize sequelize-cli mysql2
 ```
-### **Passo 2: Inicializar Sequelize no projeto**
+### **2️⃣ Inicializar Sequelize no projeto**
 ```bash 
 npx sequelize-cli init
 ```
@@ -57,7 +57,7 @@ _Isso cria a estrutura de pastas:_
 
 ```
 
-### **Passo 3: Configurar config/config.json**
+### **3️⃣ Configurar config/config.json**
 ```
 {
   "development": {
@@ -84,12 +84,12 @@ _Isso cria a estrutura de pastas:_
 }
 ```
 
-### **Passo 4: Aplicar todas as migrations**
+### **4️⃣ Aplicar todas as migrations**
 
 ```bash
 npx sequelize-cli db:migrate
 ```
-### **Passo 4: Instalar dependências do Flutter**
+### **5️⃣ Instalar dependências do Flutter**
 
 ```bash
 flutter pub get
