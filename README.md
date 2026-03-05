@@ -8,13 +8,13 @@
 -👩🏻‍🎓 Maria Eduarda Natal Comelli 
 
 
-## 🛠️ Projeto Node.js + Sequelize + Flutter
+## 🛠️ $\color{purple}{\text{Projeto Node.js + Sequelize + Flutter}}$
 
 #### Este projeto consiste em um backend desenvolvido em Node.js com Sequelize para interação com o banco de dados e um frontend em Flutter.
 
-## 📋 Pré-requisitos
+## 📋 $\color{purple}{\text{Pré-requisitos}}$ 
 
-⚠️ *Antes de começar, certifique-se de ter instalado em sua máquina:*  
+⚠️ $\color{red}{\text{Antes de começar, certifique-se de ter instalado em sua máquina:}}$  
 
 ✔️ **Git**\
 ✔️ **Node.js (versão recomendada: 16.x ou superior)**\
@@ -29,13 +29,13 @@ git clone https://github.com/bruney1991/FluentCorp
 cd APP_IDIOMAS
 ```
 
-### 📥 Instalar dependencias
-### **1️⃣ Instalar Sequelize e CLI localmente no projeto**
+### 📥 $\color{purple}{\text{Instalar dependências}}$ 
+### 1️⃣ $\color{purple}{\text{Instalar Sequelize e CLI localmente no projeto}}$ 
 
 ```bash
 npm install sequelize sequelize-cli mysql2
 ```
-### **2️⃣ Inicializar Sequelize no projeto**
+### 2️⃣ $\color{purple}{\text{Inicializar Sequelize no projeto}}$
 ```bash 
 npx sequelize-cli init
 ```
@@ -57,7 +57,7 @@ _Isso cria a estrutura de pastas:_
 
 ```
 
-### **3️⃣ Configurar config/config.json**
+### 3️⃣ $\color{purple}{\text{Configurar config/config.json}}$
 ```
 {
   "development": {
@@ -84,12 +84,12 @@ _Isso cria a estrutura de pastas:_
 }
 ```
 
-### **4️⃣ Aplicar todas as migrations**
+### 4️⃣ $\color{purple}{\text{Aplicar todas as migrations}}$
 
 ```bash
 npx sequelize-cli db:migrate
 ```
-### **5️⃣ Instalar dependências do Flutter**
+### 5️⃣ $\color{purple}{\text{Instalar dependências do Flutter}}$
 
 ```bash
 flutter pub get
