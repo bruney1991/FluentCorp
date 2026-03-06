@@ -71,6 +71,7 @@ header p {
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   transition: 0.3s;
+  text-align: center;
 }
 .card:hover {
   transform: translateY(-12px);
@@ -79,45 +80,6 @@ header p {
 .tech-icon {
   font-size: 45px;
   margin-bottom: 15px;
-}
-
-/* DIAGRAMA UML COM SETAS DIAGONAIS */
-.arch-diagram-container {
-  position: relative;
-  width: 100%;
-  margin: 80px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 80px;
-}
-.arch-layer {
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-}
-.arch-box {
-  padding: 20px 25px;
-  border-radius: 12px;
-  text-align: center;
-  font-weight: bold;
-  color: white;
-  width: 200px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.arch-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(168,85,247,0.6);
-}
-/* SVG setas diagonais */
-.arch-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
 }
 
 /* INTERFACE GRID */
@@ -186,14 +148,6 @@ footer {
   .interface-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-  .interface-card, .video-card {
-    width: 280px;
-    height: 560px;
-  }
-  .arch-layer {
-    flex-direction: column;
-    gap: 40px;
-  }
 }
 </style>
 </head>
@@ -213,6 +167,7 @@ footer {
   <p>O sistema usa Flutter no front, Node.js + Sequelize no backend, e MySQL como banco de dados.</p>
 </div>
 
+<!-- Arquitetura da Aplicação simplificada -->
 <div class="container">
   <h2 class="section-title">Arquitetura da Aplicação</h2>
   <div class="cards" style="display: flex; flex-direction: column; align-items: center; gap: 25px;">
@@ -223,20 +178,13 @@ footer {
   </div>
 </div>
 
-    <!-- SVG setas diagonais -->
-    <svg class="arch-svg">
-      <defs>
-        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
-          <polygon points="0 0, 10 3.5, 0 7" fill="#facc15"/>
-        </marker>
-      </defs>
-      <!-- Linha diagonal Flutter -> Node.js -->
-      <line x1="20%" y1="40" x2="60%" y2="140" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
-      <!-- Linha diagonal Node.js -> Sequelize -->
-      <line x1="60%" y1="140" x2="40%" y2="240" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
-      <!-- Linha diagonal Sequelize -> MySQL -->
-      <line x1="40%" y1="240" x2="60%" y2="340" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
-    </svg>
+<div class="container">
+  <h2 class="section-title">Tecnologias Utilizadas</h2>
+  <div class="cards">
+    <div class="card"><div class="tech-icon">📱</div><h3>Flutter</h3><p>Framework utilizado para desenvolvimento da interface mobile.</p></div>
+    <div class="card"><div class="tech-icon">⚙️</div><h3>Node.js</h3><p>Backend responsável pela API e comunicação com o banco de dados.</p></div>
+    <div class="card"><div class="tech-icon">🗄️</div><h3>Sequelize</h3><p>ORM utilizado para interação com o banco de dados MySQL.</p></div>
+    <div class="card"><div class="tech-icon">💾</div><h3>MySQL</h3><p>Banco de dados responsável pelo armazenamento das informações.</p></div>
   </div>
 </div>
 
