@@ -11,7 +11,7 @@
 <style>
 
 body{
-font-family: Arial;
+font-family:Arial;
 margin:0;
 background:#0f0f1a;
 color:white;
@@ -19,13 +19,19 @@ text-align:center;
 }
 
 header{
-padding:100px 20px;
+padding:80px 20px;
 background:linear-gradient(135deg,#141427,#1c1c35);
 }
 
+.logo{
+width:120px;
+margin-bottom:10px;
+}
+
 header h1{
-font-size:52px;
+font-size:48px;
 color:#a855f7;
+margin:10px 0;
 }
 
 header p{
@@ -39,7 +45,7 @@ padding:50px 20px;
 }
 
 .section-title{
-font-size:34px;
+font-size:32px;
 color:#a855f7;
 margin-bottom:30px;
 }
@@ -59,35 +65,7 @@ transition:0.3s;
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
-}
-
-.card h3{
-margin-top:10px;
-}
-
-.carousel-container{
-overflow:hidden;
-cursor:grab;
-}
-
-.carousel{
-display:flex;
-gap:30px;
-transition:transform 0.3s;
-}
-
-.carousel img{
-width:250px;
-border-radius:12px;
-}
-
-.video{
-margin-top:40px;
-}
-
-iframe{
-border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
 .github-btn{
@@ -104,9 +82,54 @@ text-decoration:none;
 background:#9333ea;
 }
 
+/* ARQUITETURA */
+
 .architecture{
-margin-top:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:30px;
+flex-wrap:wrap;
 }
+
+.arch-box{
+background:#1c1c35;
+padding:20px 30px;
+border-radius:10px;
+font-weight:bold;
+}
+
+.arrow{
+font-size:28px;
+color:#a855f7;
+}
+
+/* CARROSSEL */
+
+.carousel-container{
+overflow:hidden;
+cursor:grab;
+padding:20px 0;
+}
+
+.carousel{
+display:flex;
+gap:30px;
+user-select:none;
+}
+
+.carousel img{
+width:260px;
+border-radius:12px;
+}
+
+/* VIDEO */
+
+.video{
+margin-top:40px;
+}
+
+/* FOOTER */
 
 footer{
 margin-top:60px;
@@ -121,6 +144,8 @@ background:#141427;
 <body>
 
 <header>
+
+<img src="images/logo.png" class="logo">
 
 <h1>Fluent Corp</h1>
 
@@ -141,12 +166,12 @@ Acessar repositório
 <p>
 O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo
 de auxiliar usuários no aprendizado de novos idiomas através de uma interface
-simples, interativa e personalizada.
+simples e interativa.
 </p>
 
 <p>
-O sistema utiliza uma API em Node.js conectada a um banco MySQL e uma interface
-mobile desenvolvida em Flutter.
+O sistema possui uma API desenvolvida em Node.js conectada ao banco de dados
+MySQL e uma interface mobile desenvolvida em Flutter.
 </p>
 
 </div>
@@ -161,22 +186,22 @@ mobile desenvolvida em Flutter.
 
 <div class="card">
 <h3>📱 Flutter</h3>
-<p>Framework utilizado para desenvolvimento da interface mobile.</p>
+<p>Interface mobile do aplicativo.</p>
 </div>
 
 <div class="card">
 <h3>⚙️ Node.js</h3>
-<p>Backend responsável pela API e comunicação com o banco de dados.</p>
+<p>Backend responsável pela API.</p>
 </div>
 
 <div class="card">
 <h3>🧠 Sequelize</h3>
-<p>ORM utilizado para integração entre o Node.js e o banco MySQL.</p>
+<p>ORM utilizado para integração com o banco.</p>
 </div>
 
 <div class="card">
 <h3>🗄️ MySQL</h3>
-<p>Banco de dados responsável pelo armazenamento das informações.</p>
+<p>Banco de dados do sistema.</p>
 </div>
 
 </div>
@@ -189,13 +214,17 @@ mobile desenvolvida em Flutter.
 
 <h2 class="section-title">Arquitetura do Sistema</h2>
 
-<p>O sistema segue uma arquitetura cliente-servidor.</p>
-
 <div class="architecture">
 
-<img src="https://i.imgur.com/WY5QYpK.png" width="500">
+<div class="arch-box">Flutter App</div>
 
-<p>Flutter → API Node.js → Banco de Dados MySQL</p>
+<div class="arrow">→</div>
+
+<div class="arch-box">API Node.js</div>
+
+<div class="arrow">→</div>
+
+<div class="arch-box">Banco MySQL</div>
 
 </div>
 
@@ -211,47 +240,34 @@ mobile desenvolvida em Flutter.
 
 <div class="card">
 <h3>👤 Cadastro de usuários</h3>
-<p>Criação de conta para acesso ao aplicativo.</p>
 </div>
 
 <div class="card">
 <h3>🔐 Login seguro</h3>
-<p>Autenticação de usuários na plataforma.</p>
 </div>
 
 <div class="card">
 <h3>🌍 Seleção de idioma</h3>
-<p>Escolha do idioma para aprendizado.</p>
 </div>
 
 <div class="card">
-<h3>📊 Nível de conhecimento</h3>
-<p>Definição do nível do usuário no idioma escolhido.</p>
+<h3>📊 Definição de nível</h3>
 </div>
 
 <div class="card">
 <h3>🗓️ Planejamento de estudos</h3>
-<p>Usuário define disponibilidade semanal para organizar os estudos.</p>
 </div>
 
 <div class="card">
 <h3>🧠 Flashcards</h3>
-<p>Sistema de memorização de vocabulário.</p>
 </div>
 
 <div class="card">
-<h3>💬 Treino de conversação</h3>
-<p>Prática de diálogo para melhorar fluência.</p>
+<h3>💬 Conversação</h3>
 </div>
 
 <div class="card">
-<h3>🎧 Conteúdo em áudio</h3>
-<p>Músicas e podcasts para prática de escuta.</p>
-</div>
-
-<div class="card">
-<h3>📈 Perfil e progresso</h3>
-<p>Acompanhamento da evolução do usuário.</p>
+<h3>🎧 Músicas e podcasts</h3>
 </div>
 
 </div>
@@ -316,7 +332,7 @@ allowfullscreen>
 
 <footer>
 
-<p>Projeto acadêmico – 2026</p>
+<p>Projeto acadêmico SENAC – 2025</p>
 
 </footer>
 
@@ -324,36 +340,45 @@ allowfullscreen>
 
 <script>
 
-const carousel = document.getElementById('carousel');
+const slider = document.getElementById('carousel');
 
 let isDown = false;
 let startX;
 let scrollLeft;
 
-carousel.addEventListener('mousedown', (e) => {
+slider.addEventListener('mousedown', (e)=>{
+
 isDown = true;
-startX = e.pageX - carousel.offsetLeft;
-scrollLeft = carousel.scrollLeft;
+
+startX = e.pageX - slider.offsetLeft;
+
+scrollLeft = slider.scrollLeft;
+
 });
 
-carousel.addEventListener('mouseleave', () => {
-isDown = false;
+slider.addEventListener('mouseleave', ()=>{
+
+isDown=false;
+
 });
 
-carousel.addEventListener('mouseup', () => {
-isDown = false;
+slider.addEventListener('mouseup', ()=>{
+
+isDown=false;
+
 });
 
-carousel.addEventListener('mousemove', (e) => {
+slider.addEventListener('mousemove',(e)=>{
 
 if(!isDown) return;
 
 e.preventDefault();
 
-const x = e.pageX - carousel.offsetLeft;
+const x = e.pageX - slider.offsetLeft;
+
 const walk = (x - startX) * 2;
 
-carousel.scrollLeft = scrollLeft - walk;
+slider.scrollLeft = scrollLeft - walk;
 
 });
 
