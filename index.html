@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
 <head>
@@ -12,57 +11,31 @@
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family: Arial;
 margin:0;
 background:#0f0f1a;
 color:white;
 text-align:center;
 }
 
-/* HEADER */
-
 header{
-padding:90px 20px;
+padding:100px 20px;
 background:linear-gradient(135deg,#141427,#1c1c35);
 }
 
-.logo{
-max-width:140px;
-margin-bottom:15px;
-}
-
 header h1{
-font-size:48px;
+font-size:52px;
 color:#a855f7;
-margin-bottom:10px;
 }
 
 header p{
 font-size:20px;
-color:#d1d1d1;
 }
-
-.github-btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 24px;
-background:#a855f7;
-color:white;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.github-btn:hover{
-background:#9333ea;
-}
-
-/* CONTAINERS */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:50px 20px;
 }
 
 .section-title{
@@ -71,99 +44,73 @@ color:#a855f7;
 margin-bottom:30px;
 }
 
-/* CARDS */
-
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.feature-card{
+.card{
 background:#1c1c35;
 padding:25px;
 border-radius:12px;
 transition:0.3s;
-font-size:18px;
 }
 
-.feature-card:hover{
-transform:translateY(-6px);
-background:#25254a;
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-.feature-icon{
-font-size:32px;
-margin-bottom:10px;
+.card h3{
+margin-top:10px;
 }
-
-/* CARROSSEL */
 
 .carousel-container{
+overflow:hidden;
+cursor:grab;
+}
+
+.carousel{
 display:flex;
-justify-content:center;
-align-items:center;
-gap:20px;
+gap:30px;
+transition:transform 0.3s;
 }
 
 .carousel img{
-height:420px;
+width:250px;
 border-radius:12px;
-display:none;
 }
 
-.carousel img.active{
-display:block;
-}
-
-.carousel-btn{
-background:#a855f7;
-border:none;
-color:white;
-font-size:22px;
-padding:12px 18px;
-border-radius:6px;
-cursor:pointer;
-}
-
-.carousel-btn:hover{
-background:#9333ea;
-}
-
-/* ARQUITETURA */
-
-.architecture{
-display:flex;
-flex-direction:column;
-align-items:center;
-gap:15px;
-font-size:18px;
-}
-
-.box{
-background:#1c1c35;
-padding:20px 30px;
-border-radius:10px;
-width:260px;
-}
-
-/* VIDEO */
-
-.video-container{
-margin-top:20px;
-display:flex;
-justify-content:center;
+.video{
+margin-top:40px;
 }
 
 iframe{
-border-radius:10px;
+border-radius:12px;
 }
 
-/* FOOTER */
+.github-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 24px;
+background:#a855f7;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.github-btn:hover{
+background:#9333ea;
+}
+
+.architecture{
+margin-top:30px;
+}
 
 footer{
 margin-top:60px;
-padding:30px;
+padding:40px;
 background:#141427;
 }
 
@@ -175,17 +122,17 @@ background:#141427;
 
 <header>
 
-<img class="logo" src="images/logo.png">
-
 <h1>Fluent Corp</h1>
 
 <p>Aplicativo de aprendizado de idiomas desenvolvido com Flutter e Node.js</p>
 
 <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">
-Acessar Repositório no GitHub
+Acessar repositório
 </a>
 
 </header>
+
+
 
 <div class="container">
 
@@ -193,16 +140,18 @@ Acessar Repositório no GitHub
 
 <p>
 O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo
-de auxiliar usuários no aprendizado de novos idiomas através de uma plataforma
-interativa e acessível.
+de auxiliar usuários no aprendizado de novos idiomas através de uma interface
+simples, interativa e personalizada.
 </p>
 
 <p>
-O sistema utiliza uma arquitetura cliente-servidor composta por aplicativo mobile,
-API backend e banco de dados relacional.
+O sistema utiliza uma API em Node.js conectada a um banco MySQL e uma interface
+mobile desenvolvida em Flutter.
 </p>
 
 </div>
+
+
 
 <div class="container">
 
@@ -210,33 +159,49 @@ API backend e banco de dados relacional.
 
 <div class="cards">
 
-<div class="feature-card">
-<div class="feature-icon">📱</div>
-Flutter<br>
-Interface mobile do aplicativo
+<div class="card">
+<h3>📱 Flutter</h3>
+<p>Framework utilizado para desenvolvimento da interface mobile.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">⚙️</div>
-Node.js<br>
-Backend e API do sistema
+<div class="card">
+<h3>⚙️ Node.js</h3>
+<p>Backend responsável pela API e comunicação com o banco de dados.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">🧩</div>
-Sequelize<br>
-ORM para comunicação com o banco
+<div class="card">
+<h3>🧠 Sequelize</h3>
+<p>ORM utilizado para integração entre o Node.js e o banco MySQL.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">🗄️</div>
-MySQL<br>
-Banco de dados relacional
+<div class="card">
+<h3>🗄️ MySQL</h3>
+<p>Banco de dados responsável pelo armazenamento das informações.</p>
 </div>
 
 </div>
 
 </div>
+
+
+
+<div class="container">
+
+<h2 class="section-title">Arquitetura do Sistema</h2>
+
+<p>O sistema segue uma arquitetura cliente-servidor.</p>
+
+<div class="architecture">
+
+<img src="https://i.imgur.com/WY5QYpK.png" width="500">
+
+<p>Flutter → API Node.js → Banco de Dados MySQL</p>
+
+</div>
+
+</div>
+
+
 
 <div class="container">
 
@@ -244,64 +209,56 @@ Banco de dados relacional
 
 <div class="cards">
 
-<div class="feature-card">
-<div class="feature-icon">👤</div>
-Cadastro e login de usuários
+<div class="card">
+<h3>👤 Cadastro de usuários</h3>
+<p>Criação de conta para acesso ao aplicativo.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">🌎</div>
-Escolha do idioma de aprendizado
+<div class="card">
+<h3>🔐 Login seguro</h3>
+<p>Autenticação de usuários na plataforma.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">📊</div>
-Definição de nível de conhecimento
+<div class="card">
+<h3>🌍 Seleção de idioma</h3>
+<p>Escolha do idioma para aprendizado.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">🧠</div>
-Flashcards para memorização
+<div class="card">
+<h3>📊 Nível de conhecimento</h3>
+<p>Definição do nível do usuário no idioma escolhido.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">💬</div>
-Treinamento de conversação
+<div class="card">
+<h3>🗓️ Planejamento de estudos</h3>
+<p>Usuário define disponibilidade semanal para organizar os estudos.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">🎧</div>
-Músicas e podcasts para aprendizado
+<div class="card">
+<h3>🧠 Flashcards</h3>
+<p>Sistema de memorização de vocabulário.</p>
 </div>
 
-<div class="feature-card">
-<div class="feature-icon">📈</div>
-Perfil e acompanhamento de progresso
+<div class="card">
+<h3>💬 Treino de conversação</h3>
+<p>Prática de diálogo para melhorar fluência.</p>
 </div>
 
+<div class="card">
+<h3>🎧 Conteúdo em áudio</h3>
+<p>Músicas e podcasts para prática de escuta.</p>
 </div>
 
+<div class="card">
+<h3>📈 Perfil e progresso</h3>
+<p>Acompanhamento da evolução do usuário.</p>
 </div>
-
-<div class="container">
-
-<h2 class="section-title">Arquitetura do Sistema</h2>
-
-<div class="architecture">
-
-<div class="box">Frontend<br>Flutter Mobile App</div>
-
-⬇
-
-<div class="box">Backend<br>Node.js API</div>
-
-⬇
-
-<div class="box">Banco de Dados<br>MySQL + Sequelize</div>
 
 </div>
 
 </div>
+
+
 
 <div class="container">
 
@@ -309,11 +266,9 @@ Perfil e acompanhamento de progresso
 
 <div class="carousel-container">
 
-<button class="carousel-btn" onclick="prevSlide()">◀</button>
+<div class="carousel" id="carousel">
 
-<div class="carousel">
-
-<img src="images/F01_INICIAL.png" class="active">
+<img src="images/F01_INICIAL.png">
 <img src="images/F02_CADASTRO.png">
 <img src="images/F03_IDIOMA.png">
 <img src="images/F04_NIVEL.png">
@@ -327,28 +282,24 @@ Perfil e acompanhamento de progresso
 
 </div>
 
-<button class="carousel-btn" onclick="nextSlide()">▶</button>
-
 </div>
 
-</div>
 
-<div class="container">
+
+<div class="video">
 
 <h2 class="section-title">Demonstração do Aplicativo</h2>
 
-<div class="video-container">
-
-<iframe width="315" height="560"
+<iframe width="320" height="560"
 src="https://www.youtube.com/embed/puMX4z3NjGE"
-title="Demonstração do aplicativo"
-frameborder="0"
 allowfullscreen>
 </iframe>
 
 </div>
 
 </div>
+
+
 
 <div class="container">
 
@@ -361,34 +312,50 @@ allowfullscreen>
 
 </div>
 
+
+
 <footer>
 
 <p>Projeto acadêmico – 2026</p>
 
 </footer>
 
+
+
 <script>
 
-let slideIndex = 0
-const slides = document.querySelectorAll(".carousel img")
+const carousel = document.getElementById('carousel');
 
-function showSlide(index){
+let isDown = false;
+let startX;
+let scrollLeft;
 
-slides.forEach(slide=>slide.classList.remove("active"))
+carousel.addEventListener('mousedown', (e) => {
+isDown = true;
+startX = e.pageX - carousel.offsetLeft;
+scrollLeft = carousel.scrollLeft;
+});
 
-slideIndex = (index + slides.length) % slides.length
+carousel.addEventListener('mouseleave', () => {
+isDown = false;
+});
 
-slides[slideIndex].classList.add("active")
+carousel.addEventListener('mouseup', () => {
+isDown = false;
+});
 
-}
+carousel.addEventListener('mousemove', (e) => {
 
-function nextSlide(){
-showSlide(slideIndex + 1)
-}
+if(!isDown) return;
 
-function prevSlide(){
-showSlide(slideIndex - 1)
-}
+e.preventDefault();
+
+const x = e.pageX - carousel.offsetLeft;
+const walk = (x - startX) * 2;
+
+carousel.scrollLeft = scrollLeft - walk;
+
+});
 
 </script>
 
