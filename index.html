@@ -13,36 +13,23 @@ body {
   scroll-behavior: smooth;
 }
 
-/* HERO / HEADER */
+/* HERO */
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px;
   background: linear-gradient(135deg, #141427, #1c1c35);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
-
-.logo-container {
-  margin-bottom: 20px;
+header h1 {
+  font-size: 56px;
+  color: #a855f7;
+  margin-bottom: 25px;
 }
-
-.logo-main {
-  width: 100%;
-  max-width: 380px; 
-  height: auto;
-  /* O filter abaixo ajuda a suavizar bordas se a imagem tiver resquícios de fundo */
-  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.3));
-}
-
 header p {
   font-size: 22px;
   color: #d1d5db;
   max-width: 700px;
-  margin: 0 auto 40px auto;
-  line-height: 1.5;
+  margin: 0 auto 60px auto;
 }
-
 .cta a {
   background: #a855f7;
   padding: 18px 40px;
@@ -54,46 +41,42 @@ header p {
   transition: 0.3s;
   font-size: 20px;
 }
-
 .cta a:hover {
   background: #9333ea;
   transform: scale(1.05);
 }
 
-/* CONTAINER GERAL */
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
   padding: 60px 20px;
   text-align: center;
 }
-
 .section-title {
   font-size: 34px;
   color: #a855f7;
   margin-bottom: 40px;
 }
 
-/* CARDS */
+/* CARDS TECNOLOGIAS/FUNCIONALIDADES */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
-
 .card {
   background: #1c1c35;
   padding: 30px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   transition: 0.3s;
+  text-align: center;
 }
-
 .card:hover {
   transform: translateY(-12px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
-
 .tech-icon {
   font-size: 45px;
   margin-bottom: 15px;
@@ -102,42 +85,48 @@ header p {
 /* INTERFACE GRID */
 .interface-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
   justify-items: center;
 }
-
 .interface-card, .video-card {
-  width: 100%;
-  max-width: 320px;
+  width: 320px;
   height: 640px;
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0,0,0,0.5);
   transition: 0.4s;
 }
-
 .interface-card img, .video-card iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border: none;
 }
+.interface-card:hover, .video-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 25px 60px rgba(168,85,247,0.4);
+}
+.video-caption {
+  color: #a855f7;
+  font-size: 18px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: bold;
+}
 
-/* EQUIPE */
+/* TEAM e FOOTER */
 ul {
   list-style: none;
   padding: 0;
   font-size: 18px;
   line-height: 32px;
 }
-
 footer {
   text-align: center;
   padding: 40px;
   background: #141427;
 }
-
 .github-btn {
   display: inline-block;
   margin-top: 15px;
@@ -149,63 +138,88 @@ footer {
   text-decoration: none;
   transition: 0.3s;
 }
+.github-btn:hover {
+  background: #9333ea;
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .interface-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo-container">
-    <img src="images/logo.png" alt="Fluent Corp" class="logo-main">
-  </div>
+  <h1>Fluent Corp</h1>
   <p>Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico utilizando Flutter no frontend e Node.js no backend.</p>
   <div class="cta">
     <a href="https://github.com/bruney1991/FluentCorp" target="_blank">Ver no GitHub</a>
   </div>
 </header>
 
-<div class="container" id="sobre">
+<div class="container">
   <h2 class="section-title">Sobre o Projeto</h2>
   <p>O Fluent Corp é um aplicativo acadêmico que auxilia no aprendizado de idiomas com interface simples, moderna e interativa.</p>
   <p>O sistema usa Flutter no front, Node.js + Sequelize no backend, e MySQL como banco de dados.</p>
 </div>
 
+<!-- Arquitetura da Aplicação simplificada -->
 <div class="container">
   <h2 class="section-title">Arquitetura da Aplicação</h2>
   <div class="cards" style="display: flex; flex-direction: column; align-items: center; gap: 25px;">
-    <div class="card" style="background:#7c3aed; width: 250px;">Aplicativo Mobile<br>Flutter</div>
-    <div class="card" style="background:#2563eb; width: 250px;">API Backend<br>Node.js</div>
-    <div class="card" style="background:#f43f5e; width: 250px;">ORM<br>Sequelize</div>
-    <div class="card" style="background:#16a34a; width: 250px;">Banco de Dados<br>MySQL</div>
+    <div class="card" style="background:#7c3aed;">Aplicativo Mobile<br>Flutter</div>
+    <div class="card" style="background:#2563eb;">API Backend<br>Node.js</div>
+    <div class="card" style="background:#f43f5e;">ORM<br>Sequelize</div>
+    <div class="card" style="background:#16a34a;">Banco de Dados<br>MySQL</div>
   </div>
 </div>
 
-<div class="container" id="tecnologias">
+<div class="container">
   <h2 class="section-title">Tecnologias Utilizadas</h2>
   <div class="cards">
-    <div class="card"><div class="tech-icon">📱</div><h3>Flutter</h3><p>Framework para interface mobile.</p></div>
-    <div class="card"><div class="tech-icon">⚙️</div><h3>Node.js</h3><p>Backend e API.</p></div>
-    <div class="card"><div class="tech-icon">🗄️</div><h3>Sequelize</h3><p>ORM para banco de dados.</p></div>
-    <div class="card"><div class="tech-icon">💾</div><h3>MySQL</h3><p>Armazenamento de dados.</p></div>
+    <div class="card"><div class="tech-icon">📱</div><h3>Flutter</h3><p>Framework utilizado para desenvolvimento da interface mobile.</p></div>
+    <div class="card"><div class="tech-icon">⚙️</div><h3>Node.js</h3><p>Backend responsável pela API e comunicação com o banco de dados.</p></div>
+    <div class="card"><div class="tech-icon">🗄️</div><h3>Sequelize</h3><p>ORM utilizado para interação com o banco de dados MySQL.</p></div>
+    <div class="card"><div class="tech-icon">💾</div><h3>MySQL</h3><p>Banco de dados responsável pelo armazenamento das informações.</p></div>
   </div>
 </div>
 
-<div class="container" id="funcionalidades">
+<div class="container">
   <h2 class="section-title">Funcionalidades</h2>
   <div class="cards">
-    <div class="card"><p>📝 Cadastro e Login</p></div>
-    <div class="card"><p>🌐 Gestão via API</p></div>
-    <div class="card"><p>🗣️ Seleção de Idiomas</p></div>
-    <div class="card"><p>📈 Progresso do Usuário</p></div>
+    <div class="card"><p>📝 Cadastro de usuários</p></div>
+    <div class="card"><p>🔑 Login de usuários</p></div>
+    <div class="card"><p>🌐 Gerenciamento de dados via API</p></div>
+    <div class="card"><p>📱 Interface mobile desenvolvida com Flutter</p></div>
+    <div class="card"><p>🗣️ Seleção de idioma</p></div>
+    <div class="card"><p>📊 Nível de conhecimento</p></div>
+    <div class="card"><p>⏰ Disponibilidade de horário</p></div>
+    <div class="card"><p>📈 Perfil e progresso</p></div>
   </div>
 </div>
 
-<div class="container" id="interface">
+<div class="container">
   <h2 class="section-title">Interface do Aplicativo</h2>
   <div class="interface-grid">
-    <div class="interface-card"><img src="images/F01_INICIAL.png"></div>
-    <div class="interface-card"><img src="images/F07_HOME.png"></div>
+    <div class="interface-card"><img src="images/F01_INICIAL.png" alt="Tela inicial / login"></div>
+    <div class="interface-card"><img src="images/F02_CADASTRO.png" alt="Cadastro de usuário"></div>
+    <div class="interface-card"><img src="images/F03_IDIOMA.png" alt="Seleção de idioma"></div>
+    <div class="interface-card"><img src="images/F04_NIVEL.png" alt="Nível de conhecimento"></div>
+    <div class="interface-card"><img src="images/F05_DISP.png" alt="Disponibilidade de horário"></div>
+    <div class="interface-card"><img src="images/F06_APRES.png" alt="Tela de apresentação"></div>
+    <div class="interface-card"><img src="images/F07_HOME.png" alt="Tela principal"></div>
+    <div class="interface-card"><img src="images/F08_CARD.png" alt="Flashcards"></div>
+    <div class="interface-card"><img src="images/F09_CONV.png" alt="Conversação"></div>
+    <div class="interface-card"><img src="images/F10_AUDIO.png" alt="Músicas e podcasts"></div>
+    <div class="interface-card"><img src="images/F11_PERFIL.png" alt="Perfil e progresso"></div>
+
     <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0&controls=1&showinfo=0" allowfullscreen></iframe>
+      <p class="video-caption">Vídeo demonstrativo</p>
     </div>
   </div>
 </div>
@@ -221,8 +235,8 @@ footer {
 </div>
 
 <footer>
-  <p>Projeto acadêmico SENAC – 2026</p>
-  <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">GitHub</a>
+  <p>Projeto acadêmico SENAC – 2025</p>
+  <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">Acessar Repositório no GitHub</a>
 </footer>
 
 </body>
