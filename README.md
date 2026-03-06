@@ -1,5 +1,10 @@
 # 🗣️ $\color{purple}{\text{Fluent Corp | Aplicativo de Idiomas}}$ 📱
 
+   
+   💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico.
+
+🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
+   
    *Integrantes do grupo:*  
    
 -👨🏻‍🎓 Bruney Mota Trindade    
