@@ -2,7 +2,6 @@
 <html lang="pt-br">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,22 +9,17 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
-
 body{
+font-family: Arial;
+margin:0;
 background:#0f0f1a;
 color:white;
 }
 
 header{
-background:#141427;
-padding:80px 20px;
 text-align:center;
+padding:80px 20px;
+background:#141427;
 }
 
 header h1{
@@ -34,7 +28,6 @@ color:#a855f7;
 }
 
 header p{
-margin-top:10px;
 font-size:20px;
 }
 
@@ -45,10 +38,9 @@ padding:40px 20px;
 }
 
 .section-title{
-text-align:center;
-font-size:30px;
-margin-bottom:30px;
+font-size:32px;
 color:#a855f7;
+margin-bottom:20px;
 }
 
 .cards{
@@ -58,92 +50,79 @@ gap:20px;
 }
 
 .card{
-background:#1c1c33;
-padding:25px;
-border-radius:10px;
-text-align:center;
-}
-
-.card h3{
-margin-bottom:10px;
-}
-
-.tech{
-background:#1c1c33;
+background:#1c1c35;
 padding:20px;
 border-radius:10px;
-text-align:center;
-}
-
-.team{
-background:#1c1c33;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-.github{
-text-align:center;
-margin-top:40px;
-}
-
-.github a{
-text-decoration:none;
-}
-
-.github button{
-background:#a855f7;
-border:none;
-padding:15px 30px;
-color:white;
-font-size:18px;
-border-radius:8px;
-cursor:pointer;
-}
-
-.github button:hover{
-background:#9333ea;
 }
 
 footer{
-margin-top:50px;
-background:#111;
-padding:25px;
 text-align:center;
+padding:30px;
+background:#141427;
+margin-top:40px;
+}
+
+a{
+color:#a855f7;
+text-decoration:none;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
-
 <h1>Fluent Corp</h1>
-
-<p>Aplicativo Mobile para Aprendizado de Idiomas</p>
-
-<p>Projeto acadêmico desenvolvido com Flutter + Node.js + MySQL</p>
-
+<p>Aplicativo de aprendizado de idiomas desenvolvido com Flutter e Node.js</p>
 </header>
-
 
 <div class="container">
 
 <h2 class="section-title">Sobre o Projeto</h2>
 
-<div class="card">
+<p>
+O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo
+de auxiliar usuários no aprendizado de novos idiomas através de uma interface
+simples e interativa.
+</p>
 
 <p>
-O Fluent Corp é um aplicativo desenvolvido para auxiliar no aprendizado de idiomas de forma simples e prática.
-O sistema utiliza um backend em Node.js com Sequelize e banco de dados MySQL, enquanto a interface mobile é construída utilizando Flutter.
+O sistema possui uma API desenvolvida em Node.js com Sequelize para comunicação
+com banco de dados MySQL e uma interface mobile desenvolvida em Flutter.
 </p>
 
 </div>
 
+<div class="container">
+
+<h2 class="section-title">Tecnologias Utilizadas</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Flutter</h3>
+<p>Framework utilizado para desenvolvimento da interface mobile.</p>
 </div>
 
+<div class="card">
+<h3>Node.js</h3>
+<p>Backend responsável pela API e comunicação com o banco de dados.</p>
+</div>
+
+<div class="card">
+<h3>Sequelize</h3>
+<p>ORM utilizado para interação com o banco de dados MySQL.</p>
+</div>
+
+<div class="card">
+<h3>MySQL</h3>
+<p>Banco de dados responsável pelo armazenamento das informações.</p>
+</div>
+
+</div>
+
+</div>
 
 <div class="container">
 
@@ -152,88 +131,49 @@ O sistema utiliza um backend em Node.js com Sequelize e banco de dados MySQL, en
 <div class="cards">
 
 <div class="card">
-<h3>Cadastro de Usuário</h3>
-<p>Criação de conta para acessar o sistema.</p>
+<p>Cadastro de usuários</p>
 </div>
 
 <div class="card">
-<h3>Login</h3>
-<p>Autenticação segura de usuários.</p>
+<p>Login de usuários</p>
 </div>
 
 <div class="card">
-<h3>Lições</h3>
-<p>Conteúdos para aprendizado de idiomas.</p>
+<p>Gerenciamento de dados via API</p>
 </div>
 
 <div class="card">
-<h3>Progresso</h3>
-<p>Acompanhamento do desenvolvimento do aluno.</p>
+<p>Interface mobile com Flutter</p>
 </div>
 
 </div>
 
 </div>
-
 
 <div class="container">
 
-<h2 class="section-title">Tecnologias Utilizadas</h2>
+<h2 class="section-title">Integrantes do Grupo</h2>
 
-<div class="cards">
-
-<div class="tech">Flutter</div>
-
-<div class="tech">Node.js</div>
-
-<div class="tech">Sequelize</div>
-
-<div class="tech">MySQL</div>
-
-<div class="tech">GitHub</div>
+<ul>
+<li>Bruney Mota Trindade</li>
+<li>Joao Caio Da Silva Santos</li>
+<li>Maria Eduarda Alves Gaia</li>
+<li>Maria Eduarda Natal Comelli</li>
+</ul>
 
 </div>
-
-</div>
-
-
-<div class="container">
-
-<h2 class="section-title">Equipe</h2>
-
-<div class="cards">
-
-<div class="team">Bruney Mota Trindade</div>
-
-<div class="team">Joao Caio Da Silva Santos</div>
-
-<div class="team">Maria Eduarda Alves Gaia</div>
-
-<div class="team">Maria Eduarda Natal Comelli</div>
-
-</div>
-
-</div>
-
-
-<div class="github">
-
-<a href="https://github.com/bruney1991/FluentCorp">
-
-<button>Ver Projeto no GitHub</button>
-
-</a>
-
-</div>
-
 
 <footer>
 
-Projeto Integrador – SENAC 2026  
-Tecnologia em Análise e Desenvolvimento de Sistemas
+<p>Projeto acadêmico – 2026</p>
+
+<p>
+<a href="https://github.com/bruney1991/FluentCorp">
+Ver repositório no GitHub
+</a>
+</p>
 
 </footer>
 
 </body>
-
 </html>
