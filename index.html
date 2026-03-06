@@ -5,50 +5,199 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fluent Corp | Aplicativo de Idiomas</title>
 <style>
-body { font-family: Arial, sans-serif; margin:0; background:#0f0f1a; color:white; scroll-behavior:smooth; }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0f0f1a;
+  color: white;
+  scroll-behavior: smooth;
+}
 
 /* HERO */
-header { text-align:center; padding:120px 20px; background:linear-gradient(135deg,#141427,#1c1c35); }
-header h1 { font-size:56px; color:#a855f7; margin-bottom:25px; }
-header p { font-size:22px; color:#d1d5db; max-width:700px; margin:0 auto 60px auto; }
-.cta a { background:#a855f7; padding:18px 40px; border-radius:10px; color:white; text-decoration:none; font-weight:bold; display:inline-block; transition:0.3s; font-size:20px; }
-.cta a:hover { background:#9333ea; transform:scale(1.05); }
+header {
+  text-align: center;
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #141427, #1c1c35);
+}
+header h1 {
+  font-size: 56px;
+  color: #a855f7;
+  margin-bottom: 25px;
+}
+header p {
+  font-size: 22px;
+  color: #d1d5db;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+.cta a {
+  background: #a855f7;
+  padding: 18px 40px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.cta a:hover {
+  background: #9333ea;
+  transform: scale(1.05);
+}
 
 /* CONTAINER */
-.container { max-width:1100px; margin:auto; padding:60px 20px; text-align:center; }
-.section-title { font-size:34px; color:#a855f7; margin-bottom:40px; }
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+.section-title {
+  font-size: 34px;
+  color: #a855f7;
+  margin-bottom: 40px;
+}
 
-/* CARDS TEC/FUNC */
-.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
-.card { background:#1c1c35; padding:30px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition:0.3s; }
-.card:hover { transform:translateY(-12px); box-shadow:0 15px 35px rgba(0,0,0,0.6); }
-.tech-icon { font-size:45px; margin-bottom:15px; }
+/* CARDS TECNOLOGIAS/FUNCIONALIDADES */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: #1c1c35;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+.tech-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
 
-/* INTERFACE GRID - IMAGENS DE FRENTE, SEM CORTE */
-.interface-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:40px; justify-items:center; }
-.interface-card { background:#1c1c35; border-radius:28px; overflow:hidden; box-shadow:0 15px 40px rgba(0,0,0,0.5); transition:0.4s; width:320px; height:640px; }
-.interface-card img { width:100%; height:100%; object-fit:cover; transition:0.4s; }
-.interface-card:hover { transform:scale(1.06); box-shadow:0 25px 60px rgba(168,85,247,0.4); }
-.interface-card:hover img { transform:scale(1.04); }
+/* INTERFACE GRID */
+.interface-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+.interface-card, .video-card {
+  width: 320px;
+  height: 640px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  transition: 0.4s;
+}
+.interface-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+.interface-card:hover, .video-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 25px 60px rgba(168,85,247,0.4);
+}
+.interface-card:hover img {
+  transform: scale(1.04);
+}
 
-/* VIDEO */
-.video-section { margin:80px auto; max-width:420px; }
-.video-title { color:#a855f7; font-size:32px; margin-bottom:25px; }
-.video-wrapper { position:relative; padding-bottom:177.78%; height:0; overflow:hidden; border-radius:20px; box-shadow:0 15px 50px rgba(0,0,0,0.7); background:#111; }
-.video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:none; }
-.fallback-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#a855f7; font-size:18px; text-align:center; width:90%; line-height:1.5; }
-.fallback-text a { color:#9333ea; text-decoration:underline; font-weight:bold; }
+/* ESTILO DO VÍDEO NA GRID */
+.video-card {
+  background: #1c1c35;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.video-wrapper {
+  width: 100%;
+  height: 85%;
+  position: relative;
+}
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.video-caption {
+  color: #a855f7;
+  font-size: 18px;
+  margin: 15px 0;
+  text-align: center;
+  font-weight: bold;
+}
+.fallback-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #a855f7;
+  font-size: 16px;
+  text-align: center;
+  width: 90%;
+  line-height: 1.4;
+}
+.fallback-text a {
+  color: #9333ea;
+  text-decoration: underline;
+  font-weight: bold;
+}
 
 /* TEAM e FOOTER */
-ul { list-style:none; padding:0; font-size:18px; line-height:32px; }
-footer { text-align:center; padding:40px; background:#141427; }
-.github-btn { display:inline-block; margin-top:15px; padding:14px 28px; background:#a855f7; color:white; border-radius:8px; font-weight:bold; text-decoration:none; transition:0.3s; }
-.github-btn:hover { background:#9333ea; transform:scale(1.05); }
+ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+  line-height: 32px;
+}
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #141427;
+}
+.github-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 14px 28px;
+  background: #a855f7;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.github-btn:hover {
+  background: #9333ea;
+  transform: scale(1.05);
+}
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-  .interface-grid { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
-  .interface-card { width:280px; height:560px; }
+  .interface-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .interface-card, .video-card {
+    width: 280px;
+    height: 560px;
+  }
+  .video-card {
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .video-wrapper {
+    padding-bottom: 177.78%;
+    height: 0;
+  }
 }
 </style>
 </head>
@@ -106,13 +255,14 @@ footer { text-align:center; padding:40px; background:#141427; }
     <div class="interface-card"><img src="images/F09_CONV.png" alt="Conversação"></div>
     <div class="interface-card"><img src="images/F10_AUDIO.png" alt="Músicas e podcasts"></div>
     <div class="interface-card"><img src="images/F11_PERFIL.png" alt="Perfil e progresso"></div>
-  </div>
 
-  <div class="video-section">
-    <div class="video-title">Demonstração do Aplicativo</div>
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/puMX4z3NjGE?rel=0&modestbranding=1&playsinline=1&autoplay=0&origin=https://bruney1991.github.io" title="Demonstração Fluent Corp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <div class="fallback-text">Se o vídeo não carregar (provável bloqueador de anúncios, extensão de privacidade ou configuração do browser), <br><a href="https://www.youtube.com/shorts/puMX4z3NjGE" target="_blank">clique aqui para assistir diretamente no YouTube</a></div>
+    <!-- Vídeo como card na grid -->
+    <div class="video-card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0&origin=https://bruney1991.github.io" title="Demonstração Fluent Corp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fallback-text">Se o vídeo não carregar (pode ser bloqueador de anúncios, extensão de privacidade ou restrição do YouTube), <br><a href="https://www.youtube.com/shorts/iFsvgexkvhI" target="_blank">clique aqui para assistir no YouTube</a></div>
+      </div>
+      <p class="video-caption">Vídeo demonstrativo</p>
     </div>
   </div>
 </div>
