@@ -7,13 +7,18 @@
     <title>Fluent Corp | Aplicativo de Idiomas</title>
 
     <style>
+        :root {
+            --primary: #a855f7;
+            --bg: #0f0f1a;
+            --card-bg: #1c1c35;
+        }
+
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            background: #0f0f1a;
+            background: var(--bg);
             color: white;
-            /* Impede que a página inteira role para os lados por causa do carrossel */
-            overflow-x: hidden; 
+            overflow-x: hidden;
         }
 
         /* HEADER */
@@ -21,137 +26,105 @@
             text-align: center;
             padding: 80px 20px;
             background: linear-gradient(135deg, #141427, #1c1c35);
+            border-bottom: 1px solid #2d2d4d;
         }
 
-        .logo {
-            width: 90px;
-            margin-bottom: 20px;
-        }
-
-        header h1 {
-            font-size: 48px;
-            color: #a855f7;
-            margin: 0;
-        }
-
-        header p {
-            font-size: 20px;
-            margin-top: 10px;
-            color: #ccc;
-        }
+        .logo { width: 90px; margin-bottom: 20px; }
+        header h1 { font-size: 48px; color: var(--primary); margin: 0; }
+        header p { font-size: 20px; margin-top: 10px; color: #ccc; }
 
         .github-btn {
             display: inline-block;
             margin-top: 25px;
-            padding: 12px 22px;
-            background: #a855f7;
+            padding: 12px 24px;
+            background: var(--primary);
             color: white;
-            border-radius: 6px;
+            border-radius: 8px;
             text-decoration: none;
             transition: 0.3s;
             font-weight: bold;
         }
 
-        .github-btn:hover {
-            background: #9333ea;
-            transform: scale(1.05);
-        }
+        .github-btn:hover { background: #9333ea; transform: translateY(-3px); }
 
-        /* SEÇÕES */
+        /* CONTAINER */
         .container {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: auto;
-            padding: 40px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
 
         .section-title {
             font-size: 32px;
-            color: #a855f7;
-            margin-bottom: 30px;
+            color: var(--primary);
+            margin-bottom: 40px;
         }
 
-        /* CARDS */
-        .cards {
+        /* FUNCIONALIDADES - 8 ITENS */
+        .func-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 20px;
         }
 
-        .card {
-            background: #1c1c35;
-            padding: 25px;
+        .func-card {
+            background: var(--card-bg);
+            padding: 20px;
             border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
             transition: 0.3s;
             border: 1px solid #2d2d4d;
+            text-align: left;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
-            border-color: #a855f7;
-        }
+        .func-card:hover { border-color: var(--primary); background: #252545; }
+        .func-card span { font-size: 24px; }
 
-        /* LISTA */
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin: 12px 0;
-            font-size: 18px;
-            color: #ddd;
-        }
-
-        /* --- CORREÇÃO DO CARROSSEL --- */
-        .carousel {
+        /* CARROSSEL 3D (STACKED) */
+        .stack-area {
+            position: relative;
+            height: 550px;
             width: 100%;
-            overflow: hidden; /* Corta o que sair da div, evitando scroll na página toda */
-            padding: 40px 0;
-            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            margin-top: 20px;
         }
 
-        .carousel-track {
-            display: flex; /* Coloca as imagens lado a lado */
-            gap: 20px;
-            padding: 0 20px;
-            cursor: grab;
-            overflow-x: auto; /* Permite scroll manual em touchscreens */
-            scroll-behavior: smooth;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        /* Esconde a barra de rolagem mas mantém a funcionalidade de deslizar */
-        .carousel-track::-webkit-scrollbar {
-            display: none;
-        }
-
-        .carousel-track img {
-            width: 250px; /* Largura fixa para manter o estilo smartphone */
-            flex-shrink: 0; /* Impede que o navegador "esmague" a imagem */
-            border-radius: 20px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
-            transition: transform 0.4s;
-            pointer-events: none; /* Evita que o clique do mouse na imagem pare o arraste */
-        }
-
-        /* --- CORREÇÃO DO VÍDEO RESPONSIVO --- */
-        .video-wrapper {
-            max-width: 800px;
-            margin: 40px auto;
-            position: relative;
-            padding-bottom: 56.25%; /* Mantém a proporção 16:9 (Cinema/YouTube) */
-            height: 0;
-            overflow: hidden;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        .video-wrapper iframe {
+        .stack-card {
             position: absolute;
-            top: 0;
-            left: 0;
+            width: 260px;
+            height: 520px;
+            border-radius: 25px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+            object-fit: cover;
+            border: 4px solid #2d2d4d;
+        }
+
+        /* Estados do Stack */
+        .stack-card.active { transform: translate3d(0, 0, 0) rotateY(0deg); z-index: 10; opacity: 1; border-color: var(--primary); }
+        .stack-card.prev { transform: translate3d(-180px, 0, -100px) rotateY(20deg); z-index: 5; opacity: 0.5; }
+        .stack-card.next { transform: translate3d(180px, 0, -100px) rotateY(-20deg); z-index: 5; opacity: 0.5; }
+        .stack-card.hidden { transform: translate3d(0, 0, -200px); opacity: 0; z-index: 0; }
+
+        /* VÍDEO (SHORTS PROPORTION) */
+        .video-container {
+            max-width: 350px;
+            margin: 40px auto;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
+            aspect-ratio: 9 / 16;
+            background: #000;
+        }
+
+        .video-container iframe {
             width: 100%;
             height: 100%;
             border: none;
@@ -159,18 +132,17 @@
 
         /* FOOTER */
         footer {
-            text-align: center;
             padding: 40px;
             background: #141427;
-            margin-top: 60px;
+            text-align: center;
             border-top: 1px solid #2d2d4d;
         }
 
-        /* RESPONSIVO */
-        @media(max-width: 768px) {
-            header h1 { font-size: 34px; }
-            .carousel-track img { width: 200px; }
-            .section-title { font-size: 26px; }
+        @media (max-width: 600px) {
+            .stack-card { width: 200px; height: 400px; }
+            .stack-area { height: 450px; }
+            .stack-card.prev { transform: translate3d(-100px, 0, -100px) rotateY(15deg); }
+            .stack-card.next { transform: translate3d(100px, 0, -100px) rotateY(-15deg); }
         }
     </style>
 </head>
@@ -178,126 +150,93 @@
 <body>
 
     <header>
-        <img src="images/logo.png" class="logo" alt="Logo Fluent Corp">
+        <img src="images/logo.png" class="logo" alt="Fluent Corp Logo">
         <h1>Fluent Corp</h1>
-        <p>Aprendizado de idiomas inteligente com Flutter & Node.js</p>
-        <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">
-            Ver no GitHub
-        </a>
+        <p>Desenvolvido com Flutter e Node.js</p>
+        <a href="https://github.com/bruney1991/FluentCorp" target="_blank" class="github-btn">Ver Repositório</a>
     </header>
 
     <div class="container">
-        <h2 class="section-title">Sobre o Projeto</h2>
-        <p>O Fluent Corp é um projeto acadêmico focado em facilitar o aprendizado de novos idiomas com uma interface moderna e interativa.</p>
-        <p>Utilizamos <strong>Node.js</strong> com Sequelize para o backend e <strong>Flutter</strong> para uma experiência mobile fluida.</p>
-    </div>
-
-    <div class="container">
-        <h2 class="section-title">Tecnologias</h2>
-        <div class="cards">
-            <div class="card"><h3>📱 Flutter</h3><p>Interface Mobile Híbrida.</p></div>
-            <div class="card"><h3>⚙️ Node.js</h3><p>API REST e lógica de negócio.</p></div>
-            <div class="card"><h3>🗄️ MySQL</h3><p>Banco de dados relacional.</p></div>
-            <div class="card"><h3>🔗 Sequelize</h3><p>ORM para persistência de dados.</p></div>
-        </div>
-    </div>
-
-    <div class="container">
         <h2 class="section-title">Funcionalidades Principais</h2>
-        <div class="cards">
-            <div class="card">Treino de conversação</div>
-            <div class="card">Flashcards inteligentes</div>
-            <div class="card">Músicas e Podcasts</div>
-            <div class="card">Plano de estudo personalizado</div>
+        <div class="func-grid">
+            <div class="func-card"><span>📝</span> Cadastro de usuários</div>
+            <div class="func-card"><span>🔐</span> Login de usuários</div>
+            <div class="func-card"><span>🌎</span> Seleção de idioma</div>
+            <div class="func-card"><span>📈</span> Nível de conhecimento</div>
+            <div class="func-card"><span>📚</span> Flashcards de aprendizado</div>
+            <div class="func-card"><span>🗣️</span> Treino de conversação</div>
+            <div class="func-card"><span>🎧</span> Áudio (Músicas/Podcasts)</div>
+            <div class="func-card"><span>🎯</span> Planejamento de estudos</div>
         </div>
     </div>
 
     <div class="container">
         <h2 class="section-title">Interface do Aplicativo</h2>
-        <div class="carousel">
-            <div class="carousel-track">
-                <img src="images/F01_INICIAL.png">
-                <img src="images/F02_CADASTRO.png">
-                <img src="images/F03_IDIOMA.png">
-                <img src="images/F04_NIVEL.png">
-                <img src="images/F05_DISP.png">
-                <img src="images/F06_APRES.png">
-                <img src="images/F07_HOME.png">
-                <img src="images/F08_CARD.png">
-                <img src="images/F09_CONV.png">
-                <img src="images/F10_AUDIO.png">
-                <img src="images/F11_PERFIL.png">
-            </div>
+        <p>Clique nas laterais para navegar nas telas</p>
+        <div class="stack-area" id="stack">
+            <img src="images/F01_INICIAL.png" class="stack-card">
+            <img src="images/F02_CADASTRO.png" class="stack-card">
+            <img src="images/F03_IDIOMA.png" class="stack-card">
+            <img src="images/F04_NIVEL.png" class="stack-card">
+            <img src="images/F05_DISP.png" class="stack-card">
+            <img src="images/F06_APRES.png" class="stack-card">
+            <img src="images/F07_HOME.png" class="stack-card">
+            <img src="images/F08_CARD.png" class="stack-card">
+            <img src="images/F09_CONV.png" class="stack-card">
+            <img src="images/F10_AUDIO.png" class="stack-card">
+            <img src="images/F11_PERFIL.png" class="stack-card">
         </div>
+    </div>
 
-        <h2 class="section-title" style="margin-top: 60px;">Demonstração</h2>
-        <div class="video-wrapper">
+    <div class="container">
+        <h2 class="section-title">Demonstração</h2>
+        <div class="video-container">
             <iframe src="https://www.youtube.com/embed/puMX4z3NjGE" 
-                title="Demo do Aplicativo" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                title="Fluent Corp Demo" 
                 allowfullscreen>
             </iframe>
         </div>
     </div>
 
     <div class="container">
-        <h2 class="section-title">Integrantes do Grupo</h2>
-        <ul>
-            <li>Bruney Mota Trindade</li>
-            <li>Joao Caio Da Silva Santos</li>
-            <li>Maria Eduarda Alves Gaia</li>
-            <li>Maria Eduarda Natal Comelli</li>
-        </ul>
+        <h2 class="section-title">Equipe</h2>
+        <p>Bruney Mota Trindade | Joao Caio Da Silva Santos</p>
+        <p>Maria Eduarda Alves Gaia | Maria Eduarda Natal Comelli</p>
     </div>
 
     <footer>
-        <p>Projeto acadêmico SENAC – 2025</p>
+        <p>Projeto Acadêmico SENAC &copy; 2025</p>
     </footer>
 
     <script>
-        const slider = document.querySelector(".carousel-track");
-        let isDown = false;
-        let startX;
-        let scrollLeft;
+        const cards = document.querySelectorAll('.stack-card');
+        let current = 0;
 
-        // Mouse Events
-        slider.addEventListener("mousedown", (e) => {
-            isDown = true;
-            slider.style.cursor = "grabbing";
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
+        function updateStack() {
+            cards.forEach((card, index) => {
+                card.classList.remove('active', 'prev', 'next', 'hidden');
+                
+                if (index === current) {
+                    card.classList.add('active');
+                } else if (index === (current - 1 + cards.length) % cards.length) {
+                    card.classList.add('prev');
+                } else if (index === (current + 1) % cards.length) {
+                    card.classList.add('next');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        cards.forEach((card, index) => {
+            card.addEventListener('click', () => {
+                current = index;
+                updateStack();
+            });
         });
 
-        slider.addEventListener("mouseleave", () => {
-            isDown = false;
-            slider.style.cursor = "grab";
-        });
-
-        slider.addEventListener("mouseup", () => {
-            isDown = false;
-            slider.style.cursor = "grab";
-        });
-
-        slider.addEventListener("mousemove", (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2; // Ajusta a velocidade do scroll
-            slider.scrollLeft = scrollLeft - walk;
-        });
-
-        // Touch Events para Mobile
-        slider.addEventListener("touchstart", (e) => {
-            startX = e.touches[0].pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-
-        slider.addEventListener("touchmove", (e) => {
-            const x = e.touches[0].pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2;
-            slider.scrollLeft = scrollLeft - walk;
-        });
+        // Inicia o posicionamento
+        updateStack();
     </script>
-
 </body>
 </html>
