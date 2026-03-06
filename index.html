@@ -18,23 +18,32 @@ header p { font-size:22px; color:#d1d5db; max-width:700px; margin:0 auto 60px au
 .container { max-width:1100px; margin:auto; padding:60px 20px; text-align:center; }
 .section-title { font-size:34px; color:#a855f7; margin-bottom:40px; }
 
-/* CARDS TECNOLOGIAS/FUNCIONALIDADES */
+/* CARDS TEC/FUNC */
 .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
 .card { background:#1c1c35; padding:30px; border-radius:16px; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition:0.3s; }
 .card:hover { transform:translateY(-12px); box-shadow:0 15px 35px rgba(0,0,0,0.6); }
 .tech-icon { font-size:45px; margin-bottom:15px; }
 
-/* INTERFACE - GRID SIMPLES COM HOVER */
-.interface-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:30px; justify-items:center; }
-.interface-card { background:#1c1c35; border-radius:20px; overflow:hidden; box-shadow:0 15px 40px rgba(0,0,0,0.5); transition:0.4s; width:320px; height:640px; }
-.interface-card img { width:100%; height:100%; object-fit:cover; transition:0.4s; }
-.interface-card:hover { transform:scale(1.08); box-shadow:0 25px 60px rgba(168,85,247,0.3); }
-.interface-card:hover img { transform:scale(1.05); }
+/* CAROUSEL HORIZONTAL FLAT COM SCROLL SNAP */
+.carousel-section { margin:60px 0; }
+.carousel-container {
+  width:100%; max-width:1000px; margin:0 auto; overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth; -webkit-overflow-scrolling:touch;
+  scrollbar-width:none; /* esconde scrollbar Firefox */
+}
+.carousel-container::-webkit-scrollbar { display:none; } /* esconde scrollbar Chrome/Safari */
+.carousel {
+  display:flex; gap:40px; padding:0 50vw; margin:0 -50vw; /* centraliza o primeiro item */
+  scroll-snap-align:start;
+}
+.carousel-item {
+  flex:0 0 360px; height:640px; scroll-snap-align:center; border-radius:32px; overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.6); transition:0.5s; opacity:0.8; transform:scale(0.9);
+}
+.carousel-item.active { opacity:1; transform:scale(1.05); box-shadow:0 30px 80px rgba(168,85,247,0.4); }
 
 /* VIDEO */
 .video-section { margin:80px auto; max-width:420px; }
-.video-title { color:#a855f7; font-size:32px; margin-bottom:25px; }
-.video-wrapper { position:relative; padding-bottom:177.78%; height:0; overflow:hidden; border-radius:20px; box-shadow:0 15px 50px rgba(0,0,0,0.7); background:#000; }
+.video-title { color:#a855f7; font-size:32px; margin-bottom:25px; text-align:center; }
+.video-wrapper { position:relative; padding-bottom:177.78%; height:0; overflow:hidden; border-radius:20px; box-shadow:0 15px 50px rgba(0,0,0,0.7); background:#111; }
 .video-wrapper iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:none; }
 .fallback-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); color:#a855f7; font-size:18px; text-align:center; width:90%; }
 .fallback-text a { color:#9333ea; text-decoration:underline; font-weight:bold; }
@@ -86,27 +95,29 @@ footer { text-align:center; padding:40px; background:#141427; }
   </div>
 </div>
 
-<div class="container">
+<div class="container carousel-section">
   <h2 class="section-title">Interface do Aplicativo</h2>
-  <div class="interface-grid">
-    <div class="interface-card"><img src="images/F01_INICIAL.png" alt="Tela inicial / login"></div>
-    <div class="interface-card"><img src="images/F02_CADASTRO.png" alt="Cadastro de usuário"></div>
-    <div class="interface-card"><img src="images/F03_IDIOMA.png" alt="Seleção de idioma"></div>
-    <div class="interface-card"><img src="images/F04_NIVEL.png" alt="Nível de conhecimento"></div>
-    <div class="interface-card"><img src="images/F05_DISP.png" alt="Disponibilidade de horário"></div>
-    <div class="interface-card"><img src="images/F06_APRES.png" alt="Tela de apresentação"></div>
-    <div class="interface-card"><img src="images/F07_HOME.png" alt="Tela principal"></div>
-    <div class="interface-card"><img src="images/F08_CARD.png" alt="Flashcards"></div>
-    <div class="interface-card"><img src="images/F09_CONV.png" alt="Conversação"></div>
-    <div class="interface-card"><img src="images/F10_AUDIO.png" alt="Músicas e podcasts"></div>
-    <div class="interface-card"><img src="images/F11_PERFIL.png" alt="Perfil e progresso"></div>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item"><img src="images/F01_INICIAL.png" alt="Tela inicial / login"></div>
+      <div class="carousel-item"><img src="images/F02_CADASTRO.png" alt="Cadastro de usuário"></div>
+      <div class="carousel-item"><img src="images/F03_IDIOMA.png" alt="Seleção de idioma"></div>
+      <div class="carousel-item"><img src="images/F04_NIVEL.png" alt="Nível de conhecimento"></div>
+      <div class="carousel-item"><img src="images/F05_DISP.png" alt="Disponibilidade de horário"></div>
+      <div class="carousel-item"><img src="images/F06_APRES.png" alt="Tela de apresentação"></div>
+      <div class="carousel-item"><img src="images/F07_HOME.png" alt="Tela principal"></div>
+      <div class="carousel-item"><img src="images/F08_CARD.png" alt="Flashcards"></div>
+      <div class="carousel-item"><img src="images/F09_CONV.png" alt="Conversação"></div>
+      <div class="carousel-item"><img src="images/F10_AUDIO.png" alt="Músicas e podcasts"></div>
+      <div class="carousel-item"><img src="images/F11_PERFIL.png" alt="Perfil e progresso"></div>
+    </div>
   </div>
 
   <div class="video-section">
     <div class="video-title">Demonstração do Aplicativo</div>
     <div class="video-wrapper">
       <iframe src="https://www.youtube.com/embed/puMX4z3NjGE?rel=0&modestbranding=1&playsinline=1&autoplay=0&origin=https://bruney1991.github.io" title="Demonstração Fluent Corp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <div class="fallback-text">Se o vídeo não carregar (pode ser bloqueador de anúncios ou extensão), <a href="https://www.youtube.com/shorts/puMX4z3NjGE" target="_blank">clique aqui para assistir diretamente no YouTube</a></div>
+      <div class="fallback-text">Se o vídeo não carregar (pode ser bloqueador de anúncios ou extensão de privacidade), <a href="https://www.youtube.com/shorts/puMX4z3NjGE" target="_blank">clique aqui para assistir diretamente no YouTube</a></div>
     </div>
   </div>
 </div>
@@ -125,6 +136,27 @@ footer { text-align:center; padding:40px; background:#141427; }
   <p>Projeto acadêmico – 2026</p>
   <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">Acessar Repositório no GitHub</a>
 </footer>
+
+<script>
+// Opcional: destaca a imagem central ao scroll (melhora UX)
+const container = document.querySelector('.carousel-container');
+const items = document.querySelectorAll('.carousel-item');
+
+container.addEventListener('scroll', () => {
+  const scrollLeft = container.scrollLeft;
+  const containerWidth = container.clientWidth;
+  items.forEach(item => {
+    const rect = item.getBoundingClientRect();
+    const center = rect.left + rect.width / 2;
+    const containerCenter = containerWidth / 2;
+    if (Math.abs(center - containerCenter) < 100) {
+      item.classList.add('active');
+    } else {
+      item.classList.remove('active');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
