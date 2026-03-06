@@ -81,22 +81,20 @@ header p {
   margin-bottom: 15px;
 }
 
-/* DIAGRAMA UML FINAL COM ESPAÇO PRÓPRIO */
+/* DIAGRAMA UML COM SETAS DIAGONAIS */
 .arch-diagram-container {
   position: relative;
   width: 100%;
-  padding: 100px 0 100px 0; /* espaço próprio */
+  margin: 80px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 80px;
 }
 .arch-layer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  position: relative;
+  justify-content: center;
+  gap: 80px;
 }
 .arch-box {
   padding: 20px 25px;
@@ -106,16 +104,13 @@ header p {
   color: white;
   width: 200px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  position: relative;
-  z-index: 1;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .arch-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(168,85,247,0.6);
 }
-
-/* Setas diagonais com SVG */
+/* SVG setas diagonais */
 .arch-svg {
   position: absolute;
   width: 100%;
@@ -149,9 +144,6 @@ header p {
 .interface-card:hover, .video-card:hover {
   transform: scale(1.06);
   box-shadow: 0 25px 60px rgba(168,85,247,0.4);
-}
-.interface-card:hover img {
-  transform: scale(1.04);
 }
 .video-caption {
   color: #a855f7;
@@ -198,6 +190,10 @@ footer {
     width: 280px;
     height: 560px;
   }
+  .arch-layer {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 </style>
 </head>
@@ -213,37 +209,36 @@ footer {
 
 <div class="container">
   <h2 class="section-title">Sobre o Projeto</h2>
-  <p>O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo de auxiliar usuários no aprendizado de novos idiomas através de uma interface simples, moderna e interativa.</p>
-  <p>O sistema utiliza uma API desenvolvida em Node.js com Sequelize para comunicação com banco de dados MySQL e uma aplicação mobile desenvolvida em Flutter.</p>
+  <p>O Fluent Corp é um aplicativo acadêmico que auxilia no aprendizado de idiomas com interface simples, moderna e interativa.</p>
+  <p>O sistema usa Flutter no front, Node.js + Sequelize no backend, e MySQL como banco de dados.</p>
 </div>
 
 <div class="container">
   <h2 class="section-title">Arquitetura da Aplicação</h2>
   <div class="arch-diagram-container">
-    <!-- Camadas -->
+    <!-- Camadas em diagonal -->
     <div class="arch-layer">
       <div class="arch-box" style="background:#7c3aed;">Aplicativo Mobile<br>Flutter</div>
-    </div>
-    <div class="arch-layer">
       <div class="arch-box" style="background:#2563eb;">API Backend<br>Node.js</div>
     </div>
     <div class="arch-layer">
       <div class="arch-box" style="background:#f43f5e;">ORM<br>Sequelize</div>
-    </div>
-    <div class="arch-layer">
       <div class="arch-box" style="background:#16a34a;">Banco de Dados<br>MySQL</div>
     </div>
 
-    <!-- SVG setas diagonais conectando as caixas -->
+    <!-- SVG setas diagonais -->
     <svg class="arch-svg">
-      <line x1="50%" y1="60" x2="50%" y2="180" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
-      <line x1="50%" y1="240" x2="50%" y2="360" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
-      <line x1="50%" y1="420" x2="50%" y2="540" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
       <defs>
         <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
           <polygon points="0 0, 10 3.5, 0 7" fill="#facc15"/>
         </marker>
       </defs>
+      <!-- Linha diagonal Flutter -> Node.js -->
+      <line x1="20%" y1="40" x2="60%" y2="140" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
+      <!-- Linha diagonal Node.js -> Sequelize -->
+      <line x1="60%" y1="140" x2="40%" y2="240" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
+      <!-- Linha diagonal Sequelize -> MySQL -->
+      <line x1="40%" y1="240" x2="60%" y2="340" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
     </svg>
   </div>
 </div>
