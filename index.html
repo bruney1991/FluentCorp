@@ -81,18 +81,16 @@ header p {
   margin-bottom: 15px;
 }
 
-/* DIAGRAMA DE ARQUITETURA COLORIDO */
+/* DIAGRAMA DE ARQUITETURA */
 .arch-diagram {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 30px;
 }
 .arch-layer {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -104,23 +102,16 @@ header p {
   font-weight: bold;
   color: white;
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  position: relative;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .arch-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(168,85,247,0.6);
 }
-.arch-flutter { background-color: #7c3aed; } /* Roxo */
-.arch-node { background-color: #2563eb; }    /* Azul */
-.arch-sequelize { background-color: #8b5cf6; } /* Lilás */
-.arch-mysql { background-color: #16a34a; }  /* Verde */
-
-/* Setas diagonais */
 .arrow {
   font-size: 36px;
-  color: #a855f7;
-  transform: rotate(90deg);
+  transform: rotate(45deg);
+  color: #facc15;
 }
 
 /* INTERFACE GRID */
@@ -219,14 +210,14 @@ footer {
   <h2 class="section-title">Arquitetura da Aplicação</h2>
   <div class="arch-diagram">
     <div class="arch-layer">
-      <div class="arch-box arch-flutter">Aplicativo Mobile<br>Flutter</div>
-      <div class="arrow">↓</div>
-      <div class="arch-box arch-node">API Backend<br>Node.js</div>
+      <div class="arch-box" style="background:#7c3aed;">Aplicativo Mobile<br>Flutter</div>
+      <div class="arrow">➤</div>
+      <div class="arch-box" style="background:#2563eb;">API Backend<br>Node.js</div>
     </div>
     <div class="arch-layer">
-      <div class="arch-box arch-sequelize">ORM<br>Sequelize</div>
-      <div class="arrow">↓</div>
-      <div class="arch-box arch-mysql">Banco de Dados<br>MySQL</div>
+      <div class="arch-box" style="background:#f43f5e;">ORM<br>Sequelize</div>
+      <div class="arrow">➤</div>
+      <div class="arch-box" style="background:#16a34a;">Banco de Dados<br>MySQL</div>
     </div>
   </div>
 </div>
@@ -261,7 +252,7 @@ footer {
     <div class="interface-card"><img src="images/F11_PERFIL.png" alt="Perfil e progresso"></div>
 
     <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0&controls=1" title="Demonstração Fluent Corp" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0&controls=1&showinfo=0" title="Demonstração Fluent Corp" allowfullscreen></iframe>
       <p class="video-caption">Vídeo demonstrativo</p>
     </div>
   </div>
