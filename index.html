@@ -81,13 +81,20 @@ header p {
   margin-bottom: 15px;
 }
 
-/* DIAGRAMA DE ARQUITETURA */
+/* DIAGRAMA DE ARQUITETURA ESTILIZADO */
 .arch-diagram {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
   margin-top: 30px;
+}
+.arch-layer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 .arch-box {
   background: #1c1c35;
@@ -104,10 +111,9 @@ header p {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(168,85,247,0.6);
 }
-.arch-arrow {
+.arrow {
   font-size: 36px;
   color: #a855f7;
-  margin: 10px 0;
 }
 
 /* INTERFACE GRID */
@@ -249,15 +255,21 @@ footer {
 
 <div class="container">
   <h2 class="section-title">Arquitetura da Aplicação</h2>
-  <p>Diagrama do fluxo de tecnologias e camadas do sistema:</p>
+  <p>Fluxo de tecnologias e camadas do sistema:</p>
   <div class="arch-diagram">
-    <div class="arch-box">Aplicativo Mobile<br>Flutter</div>
-    <div class="arch-arrow">↓</div>
-    <div class="arch-box">API Backend<br>Node.js</div>
-    <div class="arch-arrow">↓</div>
-    <div class="arch-box">ORM<br>Sequelize</div>
-    <div class="arch-arrow">↓</div>
-    <div class="arch-box">Banco de Dados<br>MySQL</div>
+    <div class="arch-layer">
+      <div class="arch-box">Aplicativo Mobile<br>Flutter</div>
+      <div class="arrow">→</div>
+      <div class="arch-box">API Backend<br>Node.js</div>
+    </div>
+    <div class="arch-layer">
+      <div class="arrow">↓</div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-box">ORM<br>Sequelize</div>
+      <div class="arrow">→</div>
+      <div class="arch-box">Banco de Dados<br>MySQL</div>
+    </div>
   </div>
 </div>
 
@@ -290,12 +302,11 @@ footer {
     <div class="interface-card"><img src="images/F10_AUDIO.png" alt="Músicas e podcasts"></div>
     <div class="interface-card"><img src="images/F11_PERFIL.png" alt="Perfil e progresso"></div>
 
-    <!-- Vídeo como card na grid -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0" title="Demonstração Fluent Corp" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0" title="Demonstração Fluent Corp" allowfullscreen></iframe>
         <div class="fallback-text">
-          <a href="https://www.youtube.com/shorts/iFsvgexkvhI" target="_blank"></a>
+          Caso o vídeo não carregue, <a href="https://www.youtube.com/shorts/iFsvgexkvhI" target="_blank">clique aqui para assistir</a>
         </div>
       </div>
       <p class="video-caption">Vídeo demonstrativo</p>
