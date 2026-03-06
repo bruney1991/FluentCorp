@@ -81,13 +81,22 @@ header p {
   margin-bottom: 15px;
 }
 
-/* DIAGRAMA UML COM SVG */
-.arch-diagram {
+/* DIAGRAMA UML FINAL COM ESPAÇO PRÓPRIO */
+.arch-diagram-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
-  margin: auto;
-  padding: 60px 0;
+  padding: 100px 0 100px 0; /* espaço próprio */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
+.arch-layer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
 }
 .arch-box {
   padding: 20px 25px;
@@ -95,24 +104,25 @@ header p {
   text-align: center;
   font-weight: bold;
   color: white;
-  width: 180px;
-  margin: 20px auto;
-  position: relative;
-  z-index: 2;
+  width: 200px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  position: relative;
+  z-index: 1;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 .arch-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(168,85,247,0.6);
 }
-.uml-line {
+
+/* Setas diagonais com SVG */
+.arch-svg {
   position: absolute;
-  stroke-width: 4;
-  fill: none;
-}
-.uml-arrow {
-  fill: #facc15;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 /* INTERFACE GRID */
@@ -209,16 +219,31 @@ footer {
 
 <div class="container">
   <h2 class="section-title">Arquitetura da Aplicação</h2>
-  <div class="arch-diagram">
-    <!-- Boxes -->
-    <div class="arch-box" style="background:#7c3aed; top:0;">Aplicativo Mobile<br>Flutter</div>
-    <div class="arch-box" style="background:#2563eb; top:150px;">API Backend<br>Node.js</div>
-    <div class="arch-box" style="background:#f43f5e; top:300px;">ORM<br>Sequelize</div>
-    <div class="arch-box" style="background:#16a34a; top:450px;">Banco de Dados<br>MySQL</div>
-    <!-- SVG arrows -->
-    <svg class="uml-line" style="position:absolute; left:50%; top:40px; width:0; height:0;">
-      <line x1="0" y1="0" x2="0" y2="130" stroke="#facc15"/>
-      <polygon points="-5,130 5,130 0,140" fill="#facc15"/>
+  <div class="arch-diagram-container">
+    <!-- Camadas -->
+    <div class="arch-layer">
+      <div class="arch-box" style="background:#7c3aed;">Aplicativo Mobile<br>Flutter</div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-box" style="background:#2563eb;">API Backend<br>Node.js</div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-box" style="background:#f43f5e;">ORM<br>Sequelize</div>
+    </div>
+    <div class="arch-layer">
+      <div class="arch-box" style="background:#16a34a;">Banco de Dados<br>MySQL</div>
+    </div>
+
+    <!-- SVG setas diagonais conectando as caixas -->
+    <svg class="arch-svg">
+      <line x1="50%" y1="60" x2="50%" y2="180" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
+      <line x1="50%" y1="240" x2="50%" y2="360" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
+      <line x1="50%" y1="420" x2="50%" y2="540" stroke="#facc15" stroke-width="4" marker-end="url(#arrowhead)"/>
+      <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="5" refY="3.5" orient="auto">
+          <polygon points="0 0, 10 3.5, 0 7" fill="#facc15"/>
+        </marker>
+      </defs>
     </svg>
   </div>
 </div>
@@ -253,7 +278,7 @@ footer {
     <div class="interface-card"><img src="images/F11_PERFIL.png" alt="Perfil e progresso"></div>
 
     <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0&controls=1&showinfo=0" title="Demonstração Fluent Corp" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0&controls=1&showinfo=0" allowfullscreen></iframe>
       <p class="video-caption">Vídeo demonstrativo</p>
     </div>
   </div>
