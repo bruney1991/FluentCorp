@@ -16,178 +16,117 @@ font-family: Arial;
 margin:0;
 background:#0f0f1a;
 color:white;
-scroll-behavior:smooth;
+text-align:center;
 }
-
-/* NAVBAR */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:#141427;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-nav h2{
-color:#a855f7;
-margin:0;
-}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:white;
-font-size:15px;
-}
-
-nav a:hover{
-color:#a855f7;
-}
-
-/* HERO */
 
 header{
-text-align:center;
-padding:120px 20px;
-background:linear-gradient(135deg,#141427,#1c1c35);
+padding:80px 20px;
+background:#141427;
+}
+
+.logo{
+width:120px;
+margin-bottom:20px;
 }
 
 header h1{
-font-size:56px;
+font-size:46px;
 color:#a855f7;
-margin-bottom:15px;
+margin-bottom:10px;
 }
 
 header p{
-font-size:22px;
-color:#d1d5db;
-max-width:700px;
-margin:auto;
+font-size:20px;
+color:#d1d1d1;
 }
-
-.cta{
-margin-top:30px;
-}
-
-.cta a{
-background:#a855f7;
-padding:14px 28px;
-border-radius:8px;
-color:white;
-text-decoration:none;
-font-weight:bold;
-margin:10px;
-display:inline-block;
-transition:0.3s;
-}
-
-.cta a:hover{
-background:#9333ea;
-transform:scale(1.05);
-}
-
-/* SECTIONS */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
-text-align:center;
+padding:50px 20px;
 }
 
 .section-title{
 font-size:34px;
 color:#a855f7;
-margin-bottom:30px;
+margin-bottom:25px;
 }
-
-/* CARDS */
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:20px;
 }
 
 .card{
 background:#1c1c35;
-padding:25px;
-border-radius:12px;
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 12px 30px rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
 }
 
 .card img{
 width:100%;
 border-radius:8px;
-margin-bottom:10px;
-transition:0.3s;
 }
-
-.card img:hover{
-transform:scale(1.05);
-}
-
-.tech-icon{
-font-size:40px;
-margin-bottom:10px;
-}
-
-/* TEAM */
 
 ul{
 list-style:none;
 padding:0;
-font-size:18px;
-line-height:32px;
 }
 
-/* VIDEO */
-
-.video-container{
-margin-top:50px;
-}
-
-.video-container iframe{
-width:360px;
-height:640px;
-max-width:90%;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:40px;
-background:#141427;
+ul li{
+margin:8px 0;
 }
 
 .github-btn{
 display:inline-block;
-margin-top:15px;
-padding:14px 28px;
+margin-top:20px;
+padding:12px 25px;
 background:#a855f7;
 color:white;
-border-radius:8px;
-font-weight:bold;
+border-radius:6px;
 text-decoration:none;
-transition:0.3s;
 }
 
 .github-btn:hover{
 background:#9333ea;
-transform:scale(1.05);
+}
+
+.carousel{
+display:flex;
+overflow-x:auto;
+gap:20px;
+padding-bottom:10px;
+scroll-snap-type:x mandatory;
+}
+
+.carousel img{
+height:420px;
+border-radius:12px;
+scroll-snap-align:center;
+}
+
+.video-container{
+margin-top:30px;
+display:flex;
+justify-content:center;
+}
+
+iframe{
+border-radius:10px;
+}
+
+footer{
+margin-top:60px;
+padding:30px;
+background:#141427;
+}
+
+.diagram{
+margin-top:30px;
+background:#1c1c35;
+padding:30px;
+border-radius:10px;
 }
 
 </style>
@@ -196,92 +135,59 @@ transform:scale(1.05);
 
 <body>
 
-<!-- NAVBAR -->
-
-<nav>
-
-<h2>Fluent Corp</h2>
-
-<div>
-
-<a href="#sobre">Sobre</a> <a href="#tecnologias">Tecnologias</a> <a href="#funcionalidades">Funcionalidades</a> <a href="#interface">Interface</a>
-
-</div>
-
-</nav>
-
-<!-- HERO -->
-
 <header>
+
+<img class="logo" src="images/logo.png">
 
 <h1>Fluent Corp</h1>
 
-<p>
-Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico
-utilizando Flutter no frontend e Node.js no backend.
-</p>
+<p>Aplicativo de aprendizado de idiomas desenvolvido com Flutter e Node.js</p>
 
-<div class="cta">
-
-<a href="https://github.com/bruney1991/FluentCorp" target="_blank">
-Ver no GitHub
+<a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">
+Acessar Repositório no GitHub
 </a>
-
-<a href="#interface">
-Ver Interface
-</a>
-
-</div>
 
 </header>
 
-<!-- SOBRE -->
-
-<div class="container" id="sobre">
+<div class="container">
 
 <h2 class="section-title">Sobre o Projeto</h2>
 
 <p>
 O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo
-de auxiliar usuários no aprendizado de novos idiomas através de uma interface
-simples, moderna e interativa.
+de auxiliar usuários no aprendizado de novos idiomas por meio de uma plataforma
+interativa e acessível.
 </p>
 
 <p>
-O sistema utiliza uma API desenvolvida em Node.js com Sequelize para comunicação
-com banco de dados MySQL e uma aplicação mobile desenvolvida em Flutter.
+O sistema utiliza uma arquitetura cliente-servidor composta por um aplicativo
+mobile desenvolvido em Flutter, uma API em Node.js e banco de dados MySQL.
 </p>
 
 </div>
 
-<!-- TECNOLOGIAS -->
-
-<div class="container" id="tecnologias">
+<div class="container">
 
 <h2 class="section-title">Tecnologias Utilizadas</h2>
 
 <div class="cards">
 
 <div class="card">
-<div class="tech-icon">📱</div>
 <h3>Flutter</h3>
 <p>Framework utilizado para desenvolvimento da interface mobile.</p>
 </div>
 
 <div class="card">
-<div class="tech-icon">⚙️</div>
 <h3>Node.js</h3>
 <p>Backend responsável pela API e comunicação com o banco de dados.</p>
 </div>
 
 <div class="card">
-<div class="tech-icon">🗄️</div>
 <h3>Sequelize</h3>
 <p>ORM utilizado para interação com o banco de dados MySQL.</p>
 </div>
 
 <div class="card">
-<div class="tech-icon">💾</div>
 <h3>MySQL</h3>
 <p>Banco de dados responsável pelo armazenamento das informações.</p>
 </div>
@@ -290,107 +196,79 @@ com banco de dados MySQL e uma aplicação mobile desenvolvida em Flutter.
 
 </div>
 
-<!-- FUNCIONALIDADES -->
-
-<div class="container" id="funcionalidades">
+<div class="container">
 
 <h2 class="section-title">Funcionalidades</h2>
 
-<div class="cards">
+<ul>
 
-<div class="card">
-<p>Cadastro de usuários</p>
-</div>
+<li>Cadastro e autenticação de usuários</li>
 
-<div class="card">
-<p>Login de usuários</p>
-</div>
+<li>Seleção de idioma e nível de aprendizado</li>
 
-<div class="card">
-<p>Gerenciamento de dados via API</p>
-</div>
+<li>Flashcards interativos para estudo</li>
 
-<div class="card">
-<p>Interface mobile desenvolvida com Flutter</p>
-</div>
+<li>Treinamento de conversação</li>
+
+<li>Conteúdos em áudio (músicas e podcasts)</li>
+
+<li>Perfil do usuário com acompanhamento de progresso</li>
+
+</ul>
 
 </div>
 
+<div class="container">
+
+<h2 class="section-title">Arquitetura do Sistema</h2>
+
+<div class="diagram">
+
+<p><strong>Frontend:</strong> Aplicativo mobile desenvolvido em Flutter</p>
+
+<p>⬇</p>
+
+<p><strong>Backend:</strong> API REST desenvolvida em Node.js</p>
+
+<p>⬇</p>
+
+<p><strong>Banco de Dados:</strong> MySQL gerenciado via Sequelize</p>
+
 </div>
 
-<!-- INTERFACE -->
+</div>
 
-<div class="container" id="interface">
+<div class="container">
 
 <h2 class="section-title">Interface do Aplicativo</h2>
 
-<div class="cards">
+<div class="carousel">
 
-<div class="card">
 <img src="images/F01_INICIAL.png">
-<p>Tela inicial / login</p>
-</div>
-
-<div class="card">
 <img src="images/F02_CADASTRO.png">
-<p>Cadastro de usuário</p>
-</div>
-
-<div class="card">
 <img src="images/F03_IDIOMA.png">
-<p>Seleção de idioma</p>
-</div>
-
-<div class="card">
 <img src="images/F04_NIVEL.png">
-<p>Nível de conhecimento</p>
-</div>
-
-<div class="card">
 <img src="images/F05_DISP.png">
-<p>Disponibilidade de horário</p>
-</div>
-
-<div class="card">
 <img src="images/F06_APRES.png">
-<p>Tela de apresentação</p>
-</div>
-
-<div class="card">
 <img src="images/F07_HOME.png">
-<p>Tela principal</p>
-</div>
-
-<div class="card">
 <img src="images/F08_CARD.png">
-<p>Flashcards</p>
-</div>
-
-<div class="card">
 <img src="images/F09_CONV.png">
-<p>Conversação</p>
-</div>
-
-<div class="card">
 <img src="images/F10_AUDIO.png">
-<p>Músicas e podcasts</p>
-</div>
-
-<div class="card">
 <img src="images/F11_PERFIL.png">
-<p>Perfil e progresso</p>
+
 </div>
 
 </div>
+
+<div class="container">
+
+<h2 class="section-title">Demonstração do Aplicativo</h2>
 
 <div class="video-container">
 
-<h3 style="color:#a855f7;margin-top:50px;">
-Demonstração do Aplicativo
-</h3>
-
-<iframe
+<iframe width="315" height="560"
 src="https://www.youtube.com/embed/puMX4z3NjGE"
+title="YouTube video"
 frameborder="0"
 allowfullscreen>
 </iframe>
@@ -399,33 +277,29 @@ allowfullscreen>
 
 </div>
 
-<!-- EQUIPE -->
-
 <div class="container">
 
 <h2 class="section-title">Integrantes do Grupo</h2>
 
 <ul>
+
 <li>Bruney Mota Trindade</li>
+
 <li>Joao Caio Da Silva Santos</li>
+
 <li>Maria Eduarda Alves Gaia</li>
+
 <li>Maria Eduarda Natal Comelli</li>
+
 </ul>
 
 </div>
-
-<!-- FOOTER -->
 
 <footer>
 
 <p>Projeto acadêmico – 2026</p>
 
-<a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">
-Acessar Repositório no GitHub
-</a>
-
 </footer>
 
 </body>
-
 </html>
