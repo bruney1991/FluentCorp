@@ -81,6 +81,27 @@ header p {
   margin-bottom: 15px;
 }
 
+/* ARQUITETURA */
+.architecture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  font-size: 20px;
+  margin-top: 30px;
+}
+.arch-box {
+  background: #1c1c35;
+  padding: 18px 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  width: 260px;
+}
+.arrow {
+  font-size: 28px;
+  color: #a855f7;
+}
+
 /* INTERFACE GRID */
 .interface-grid {
   display: grid;
@@ -227,6 +248,20 @@ footer {
 </div>
 
 <div class="container">
+  <h2 class="section-title">Arquitetura da Aplicação</h2>
+  <p>O sistema segue uma arquitetura cliente-servidor, onde cada tecnologia desempenha um papel específico na aplicação:</p>
+  <div class="architecture">
+    <div class="arch-box">Aplicativo Mobile<br>Flutter</div>
+    <div class="arrow">↓</div>
+    <div class="arch-box">API Backend<br>Node.js</div>
+    <div class="arrow">↓</div>
+    <div class="arch-box">ORM<br>Sequelize</div>
+    <div class="arrow">↓</div>
+    <div class="arch-box">Banco de Dados<br>MySQL</div>
+  </div>
+</div>
+
+<div class="container">
   <h2 class="section-title">Funcionalidades</h2>
   <div class="cards">
     <div class="card"><p>📝 Cadastro de usuários</p></div>
@@ -258,8 +293,10 @@ footer {
     <!-- Vídeo como card na grid -->
     <div class="video-card">
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0&origin=https://bruney1991.github.io" title="Demonstração Fluent Corp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <div class="fallback-text"><a href="https://www.youtube.com/shorts/iFsvgexkvhI" target="_blank"></a></div>
+        <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1&playsinline=1&autoplay=0" title="Demonstração Fluent Corp" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="fallback-text">
+          Caso o vídeo não carregue, <a href="https://www.youtube.com/shorts/iFsvgexkvhI" target="_blank">clique aqui para assistir</a>
+        </div>
       </div>
       <p class="video-caption">Vídeo demonstrativo</p>
     </div>
