@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 
 <head>
@@ -10,68 +11,98 @@
 
 <style>
 
-html{
-scroll-behavior:smooth;
-}
-
 body{
 font-family: Arial;
 margin:0;
 background:#0f0f1a;
 color:white;
+scroll-behavior:smooth;
 }
 
-/* MENU */
+/* NAVBAR */
 
 nav{
-position:fixed;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#141427;
+position:sticky;
 top:0;
-width:100%;
-background:#0f0f1a;
-padding:15px;
-text-align:center;
-border-bottom:1px solid #1c1c35;
 z-index:1000;
 }
 
-nav a{
-margin:0 15px;
+nav h2{
 color:#a855f7;
-text-decoration:none;
-font-weight:bold;
+margin:0;
 }
 
-/* HEADER */
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-size:15px;
+}
+
+nav a:hover{
+color:#a855f7;
+}
+
+/* HERO */
 
 header{
 text-align:center;
-padding:140px 20px 100px 20px;
+padding:120px 20px;
 background:linear-gradient(135deg,#141427,#1c1c35);
 }
 
 header h1{
-font-size:48px;
+font-size:56px;
 color:#a855f7;
+margin-bottom:15px;
 }
 
 header p{
-font-size:20px;
+font-size:22px;
+color:#d1d5db;
+max-width:700px;
+margin:auto;
 }
 
-/* CONTAINER */
+.cta{
+margin-top:30px;
+}
+
+.cta a{
+background:#a855f7;
+padding:14px 28px;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+margin:10px;
+display:inline-block;
+transition:0.3s;
+}
+
+.cta a:hover{
+background:#9333ea;
+transform:scale(1.05);
+}
+
+/* SECTIONS */
 
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
-padding:40px 20px;
+padding:60px 20px;
+text-align:center;
 }
 
-/* TITULOS */
-
 .section-title{
-font-size:32px;
+font-size:34px;
 color:#a855f7;
-margin-bottom:20px;
+margin-bottom:30px;
 }
 
 /* CARDS */
@@ -79,25 +110,59 @@ margin-bottom:20px;
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .card{
 background:#1c1c35;
-padding:20px;
-border-radius:10px;
+padding:25px;
+border-radius:12px;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
+transform:translateY(-10px);
+box-shadow:0 12px 30px rgba(0,0,0,0.5);
 }
 
 .card img{
 width:100%;
 border-radius:8px;
 margin-bottom:10px;
+transition:0.3s;
+}
+
+.card img:hover{
+transform:scale(1.05);
+}
+
+.tech-icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* TEAM */
+
+ul{
+list-style:none;
+padding:0;
+font-size:18px;
+line-height:32px;
+}
+
+/* VIDEO */
+
+.video-container{
+margin-top:50px;
+}
+
+.video-container iframe{
+width:360px;
+height:640px;
+max-width:90%;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
 }
 
 /* FOOTER */
@@ -106,28 +171,23 @@ footer{
 text-align:center;
 padding:40px;
 background:#141427;
-margin-top:40px;
 }
-
-/* BOTAO */
 
 .github-btn{
 display:inline-block;
-margin-top:20px;
-padding:12px 25px;
+margin-top:15px;
+padding:14px 28px;
 background:#a855f7;
 color:white;
-border-radius:6px;
-text-decoration:none;
+border-radius:8px;
 font-weight:bold;
+text-decoration:none;
+transition:0.3s;
 }
 
 .github-btn:hover{
 background:#9333ea;
-}
-
-ul{
-line-height:28px;
+transform:scale(1.05);
 }
 
 </style>
@@ -136,66 +196,92 @@ line-height:28px;
 
 <body>
 
+<!-- NAVBAR -->
+
 <nav>
-<a href="#sobre">Sobre</a>
-<a href="#tecnologias">Tecnologias</a>
-<a href="#arquitetura">Arquitetura</a>
-<a href="#funcionalidades">Funcionalidades</a>
-<a href="#telas">Telas</a>
-<a href="#grupo">Grupo</a>
+
+<h2>Fluent Corp</h2>
+
+<div>
+
+<a href="#sobre">Sobre</a> <a href="#tecnologias">Tecnologias</a> <a href="#funcionalidades">Funcionalidades</a> <a href="#interface">Interface</a>
+
+</div>
+
 </nav>
+
+<!-- HERO -->
 
 <header>
 
 <h1>Fluent Corp</h1>
 
-<p>Aplicativo de aprendizado de idiomas desenvolvido com Flutter e Node.js</p>
+<p>
+Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico
+utilizando Flutter no frontend e Node.js no backend.
+</p>
+
+<div class="cta">
+
+<a href="https://github.com/bruney1991/FluentCorp" target="_blank">
+Ver no GitHub
+</a>
+
+<a href="#interface">
+Ver Interface
+</a>
+
+</div>
 
 </header>
 
+<!-- SOBRE -->
 
-
-<div id="sobre" class="container">
+<div class="container" id="sobre">
 
 <h2 class="section-title">Sobre o Projeto</h2>
 
 <p>
 O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo
 de auxiliar usuários no aprendizado de novos idiomas através de uma interface
-simples e interativa.
+simples, moderna e interativa.
 </p>
 
 <p>
-O sistema possui uma API desenvolvida em Node.js com Sequelize para comunicação
-com banco de dados MySQL e uma interface mobile desenvolvida em Flutter.
+O sistema utiliza uma API desenvolvida em Node.js com Sequelize para comunicação
+com banco de dados MySQL e uma aplicação mobile desenvolvida em Flutter.
 </p>
 
 </div>
 
+<!-- TECNOLOGIAS -->
 
-
-<div id="tecnologias" class="container">
+<div class="container" id="tecnologias">
 
 <h2 class="section-title">Tecnologias Utilizadas</h2>
 
 <div class="cards">
 
 <div class="card">
+<div class="tech-icon">📱</div>
 <h3>Flutter</h3>
 <p>Framework utilizado para desenvolvimento da interface mobile.</p>
 </div>
 
 <div class="card">
+<div class="tech-icon">⚙️</div>
 <h3>Node.js</h3>
 <p>Backend responsável pela API e comunicação com o banco de dados.</p>
 </div>
 
 <div class="card">
+<div class="tech-icon">🗄️</div>
 <h3>Sequelize</h3>
 <p>ORM utilizado para interação com o banco de dados MySQL.</p>
 </div>
 
 <div class="card">
+<div class="tech-icon">💾</div>
 <h3>MySQL</h3>
 <p>Banco de dados responsável pelo armazenamento das informações.</p>
 </div>
@@ -204,40 +290,9 @@ com banco de dados MySQL e uma interface mobile desenvolvida em Flutter.
 
 </div>
 
+<!-- FUNCIONALIDADES -->
 
-
-<div id="arquitetura" class="container">
-
-<h2 class="section-title">Arquitetura do Sistema</h2>
-
-<p>
-O sistema segue uma arquitetura cliente-servidor composta por três camadas principais:
-</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>Frontend</h3>
-<p>Aplicativo mobile desenvolvido em Flutter responsável pela interface com o usuário.</p>
-</div>
-
-<div class="card">
-<h3>Backend</h3>
-<p>API desenvolvida em Node.js responsável pelas regras de negócio e comunicação com o banco.</p>
-</div>
-
-<div class="card">
-<h3>Banco de Dados</h3>
-<p>Banco MySQL responsável pelo armazenamento das informações do sistema.</p>
-</div>
-
-</div>
-
-</div>
-
-
-
-<div id="funcionalidades" class="container">
+<div class="container" id="funcionalidades">
 
 <h2 class="section-title">Funcionalidades</h2>
 
@@ -256,31 +311,16 @@ O sistema segue uma arquitetura cliente-servidor composta por três camadas prin
 </div>
 
 <div class="card">
-<p>Interface mobile com Flutter</p>
+<p>Interface mobile desenvolvida com Flutter</p>
 </div>
 
 </div>
 
 </div>
 
+<!-- INTERFACE -->
 
-
-<div id="grupo" class="container">
-
-<h2 class="section-title">Integrantes do Grupo</h2>
-
-<ul>
-<li>Bruney Mota Trindade</li>
-<li>Joao Caio Da Silva Santos</li>
-<li>Maria Eduarda Alves Gaia</li>
-<li>Maria Eduarda Natal Comelli</li>
-</ul>
-
-</div>
-
-
-
-<div id="telas" class="container">
+<div class="container" id="interface">
 
 <h2 class="section-title">Interface do Aplicativo</h2>
 
@@ -288,7 +328,7 @@ O sistema segue uma arquitetura cliente-servidor composta por três camadas prin
 
 <div class="card">
 <img src="images/F01_INICIAL.png">
-<p>Tela de login e cadastro</p>
+<p>Tela inicial / login</p>
 </div>
 
 <div class="card">
@@ -343,19 +383,49 @@ O sistema segue uma arquitetura cliente-servidor composta por três camadas prin
 
 </div>
 
+<div class="video-container">
+
+<h3 style="color:#a855f7;margin-top:50px;">
+Demonstração do Aplicativo
+</h3>
+
+<iframe
+src="https://www.youtube.com/embed/puMX4z3NjGE"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
 </div>
 
+</div>
 
+<!-- EQUIPE -->
+
+<div class="container">
+
+<h2 class="section-title">Integrantes do Grupo</h2>
+
+<ul>
+<li>Bruney Mota Trindade</li>
+<li>Joao Caio Da Silva Santos</li>
+<li>Maria Eduarda Alves Gaia</li>
+<li>Maria Eduarda Natal Comelli</li>
+</ul>
+
+</div>
+
+<!-- FOOTER -->
 
 <footer>
 
 <p>Projeto acadêmico – 2026</p>
 
 <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">
-Ver Projeto no GitHub
+Acessar Repositório no GitHub
 </a>
 
 </footer>
 
 </body>
+
 </html>
