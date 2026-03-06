@@ -81,26 +81,24 @@ header p {
   margin-bottom: 15px;
 }
 
-/* DIAGRAMA DE ARQUITETURA */
+/* DIAGRAMA UML COM SVG */
 .arch-diagram {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-.arch-layer {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 0;
 }
 .arch-box {
   padding: 20px 25px;
   border-radius: 12px;
-  min-width: 180px;
   text-align: center;
   font-weight: bold;
   color: white;
+  width: 180px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 2;
   box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -108,10 +106,13 @@ header p {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(168,85,247,0.6);
 }
-.arrow {
-  font-size: 36px;
-  transform: rotate(45deg);
-  color: #facc15;
+.uml-line {
+  position: absolute;
+  stroke-width: 4;
+  fill: none;
+}
+.uml-arrow {
+  fill: #facc15;
 }
 
 /* INTERFACE GRID */
@@ -209,16 +210,16 @@ footer {
 <div class="container">
   <h2 class="section-title">Arquitetura da Aplicação</h2>
   <div class="arch-diagram">
-    <div class="arch-layer">
-      <div class="arch-box" style="background:#7c3aed;">Aplicativo Mobile<br>Flutter</div>
-      <div class="arrow">➤</div>
-      <div class="arch-box" style="background:#2563eb;">API Backend<br>Node.js</div>
-    </div>
-    <div class="arch-layer">
-      <div class="arch-box" style="background:#f43f5e;">ORM<br>Sequelize</div>
-      <div class="arrow">➤</div>
-      <div class="arch-box" style="background:#16a34a;">Banco de Dados<br>MySQL</div>
-    </div>
+    <!-- Boxes -->
+    <div class="arch-box" style="background:#7c3aed; top:0;">Aplicativo Mobile<br>Flutter</div>
+    <div class="arch-box" style="background:#2563eb; top:150px;">API Backend<br>Node.js</div>
+    <div class="arch-box" style="background:#f43f5e; top:300px;">ORM<br>Sequelize</div>
+    <div class="arch-box" style="background:#16a34a; top:450px;">Banco de Dados<br>MySQL</div>
+    <!-- SVG arrows -->
+    <svg class="uml-line" style="position:absolute; left:50%; top:40px; width:0; height:0;">
+      <line x1="0" y1="0" x2="0" y2="130" stroke="#facc15"/>
+      <polygon points="-5,130 5,130 0,140" fill="#facc15"/>
+    </svg>
   </div>
 </div>
 
