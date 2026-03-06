@@ -15,46 +15,47 @@ font-family: Arial;
 margin:0;
 background:#0f0f1a;
 color:white;
-text-align:center;
 }
 
 header{
+text-align:center;
 padding:100px 20px;
 background:linear-gradient(135deg,#141427,#1c1c35);
 }
 
-header img{
+.logo{
 width:90px;
 margin-bottom:20px;
 }
 
 header h1{
-font-size:50px;
+font-size:48px;
 color:#a855f7;
 margin:0;
 }
 
 header p{
 font-size:20px;
-opacity:0.8;
+margin-top:10px;
 }
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:60px 20px;
+padding:40px 20px;
+text-align:center;
 }
 
 .section-title{
-font-size:34px;
+font-size:32px;
 color:#a855f7;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
 }
 
 .card{
@@ -65,86 +66,28 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.5);
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.5);
 }
 
 .card h3{
-margin-top:10px;
-}
-
-.card p{
-opacity:0.85;
-}
-
-.card img{
-width:100%;
-border-radius:10px;
-}
-
-.architecture{
-margin-top:40px;
-}
-
-.architecture img{
-width:80%;
-max-width:700px;
-}
-
-.carousel-container{
-overflow:hidden;
-margin-top:40px;
-}
-
-.carousel{
-display:flex;
-gap:30px;
-overflow-x:auto;
-scroll-behavior:smooth;
-cursor:grab;
-padding:20px;
-}
-
-.carousel::-webkit-scrollbar{
-display:none;
-}
-
-.carousel img{
-width:260px;
-border-radius:12px;
-flex-shrink:0;
-transition:0.3s;
-}
-
-.carousel img:hover{
-transform:scale(1.05);
-}
-
-.video-container{
-margin-top:40px;
-display:flex;
-justify-content:center;
-}
-
-iframe{
-border-radius:12px;
+margin-top:0;
 }
 
 footer{
-padding:40px;
+text-align:center;
+padding:30px;
 background:#141427;
-margin-top:80px;
-font-size:14px;
-opacity:0.7;
+margin-top:40px;
 }
 
 .github-btn{
 display:inline-block;
 margin-top:20px;
-padding:14px 26px;
+padding:12px 22px;
 background:#a855f7;
 color:white;
-border-radius:8px;
+border-radius:6px;
 text-decoration:none;
 }
 
@@ -155,7 +98,46 @@ background:#9333ea;
 ul{
 list-style:none;
 padding:0;
-line-height:30px;
+}
+
+ul li{
+margin:8px 0;
+}
+
+/* CARROSSEL */
+
+.carousel{
+overflow:hidden;
+margin-top:40px;
+}
+
+.carousel-track{
+display:flex;
+gap:30px;
+cursor:grab;
+}
+
+.carousel-track img{
+width:260px;
+border-radius:14px;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
+transition:0.3s;
+}
+
+.carousel-track img:hover{
+transform:scale(1.07);
+}
+
+/* VIDEO */
+
+.video-container{
+margin-top:60px;
+display:flex;
+justify-content:center;
+}
+
+.video-container iframe{
+border-radius:12px;
 }
 
 </style>
@@ -166,7 +148,7 @@ line-height:30px;
 
 <header>
 
-<img src="images/logo.png">
+<img src="images/logo.png" class="logo">
 
 <h1>Fluent Corp</h1>
 
@@ -186,13 +168,13 @@ Acessar Repositório
 
 <p>
 O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo
-de auxiliar usuários no aprendizado de novos idiomas através de uma experiência
-interativa e personalizada.
+de auxiliar usuários no aprendizado de novos idiomas através de uma interface
+simples, moderna e interativa.
 </p>
 
 <p>
-O sistema utiliza Flutter no aplicativo mobile e uma API construída em Node.js
-com Sequelize para comunicação com banco de dados MySQL.
+O sistema utiliza uma API desenvolvida em Node.js com Sequelize para comunicação
+com banco de dados MySQL e um aplicativo mobile desenvolvido em Flutter.
 </p>
 
 </div>
@@ -207,22 +189,22 @@ com Sequelize para comunicação com banco de dados MySQL.
 
 <div class="card">
 <h3>📱 Flutter</h3>
-<p>Interface mobile moderna e responsiva.</p>
+<p>Framework utilizado para desenvolvimento da interface mobile.</p>
 </div>
 
 <div class="card">
 <h3>⚙️ Node.js</h3>
-<p>Backend responsável pelas regras de negócio.</p>
+<p>Responsável pela API e lógica do sistema.</p>
 </div>
 
 <div class="card">
-<h3>🗄️ Sequelize</h3>
-<p>ORM utilizado para comunicação com o banco.</p>
+<h3>🗄️ MySQL</h3>
+<p>Banco de dados para armazenamento das informações.</p>
 </div>
 
 <div class="card">
-<h3>💾 MySQL</h3>
-<p>Armazenamento e gerenciamento de dados.</p>
+<h3>🔗 Sequelize</h3>
+<p>ORM utilizado para comunicação entre Node.js e MySQL.</p>
 </div>
 
 </div>
@@ -235,13 +217,15 @@ com Sequelize para comunicação com banco de dados MySQL.
 
 <h2 class="section-title">Arquitetura do Sistema</h2>
 
-<p>Fluxo de comunicação entre aplicativo, API e banco de dados.</p>
+<p>
+O sistema segue uma arquitetura cliente-servidor composta por três camadas principais:
+</p>
 
-<div class="architecture">
-
-<img src="images/arquitetura.png">
-
-</div>
+<ul>
+<li>📱 Aplicativo Mobile desenvolvido em Flutter</li>
+<li>⚙️ API Backend desenvolvida em Node.js</li>
+<li>🗄️ Banco de Dados MySQL</li>
+</ul>
 
 </div>
 
@@ -253,37 +237,14 @@ com Sequelize para comunicação com banco de dados MySQL.
 
 <div class="cards">
 
-<div class="card">
-<p>Cadastro de usuários</p>
-</div>
-
-<div class="card">
-<p>Login de usuários</p>
-</div>
-
-<div class="card">
-<p>Seleção de idioma</p>
-</div>
-
-<div class="card">
-<p>Definição de nível de conhecimento</p>
-</div>
-
-<div class="card">
-<p>Planejamento de horários de estudo</p>
-</div>
-
-<div class="card">
-<p>Flashcards de aprendizado</p>
-</div>
-
-<div class="card">
-<p>Treino de conversação</p>
-</div>
-
-<div class="card">
-<p>Músicas e podcasts educativos</p>
-</div>
+<div class="card">Cadastro de usuários</div>
+<div class="card">Login de usuários</div>
+<div class="card">Seleção de idioma</div>
+<div class="card">Definição de nível de conhecimento</div>
+<div class="card">Flashcards de aprendizado</div>
+<div class="card">Treino de conversação</div>
+<div class="card">Conteúdo em áudio (músicas e podcasts)</div>
+<div class="card">Planejamento de estudos personalizado</div>
 
 </div>
 
@@ -293,13 +254,26 @@ com Sequelize para comunicação com banco de dados MySQL.
 
 <div class="container">
 
+<h2 class="section-title">Integrantes do Grupo</h2>
+
+<ul>
+<li>Bruney Mota Trindade</li>
+<li>Joao Caio Da Silva Santos</li>
+<li>Maria Eduarda Alves Gaia</li>
+<li>Maria Eduarda Natal Comelli</li>
+</ul>
+
+</div>
+
+
+
+<div class="container">
+
 <h2 class="section-title">Interface do Aplicativo</h2>
 
-<p>Arraste as telas com o mouse para visualizar todas.</p>
-
-<div class="carousel-container">
-
 <div class="carousel">
+
+<div class="carousel-track">
 
 <img src="images/F01_INICIAL.png">
 <img src="images/F02_CADASTRO.png">
@@ -317,32 +291,18 @@ com Sequelize para comunicação com banco de dados MySQL.
 
 </div>
 
+
+
 <div class="video-container">
 
-<iframe width="350" height="620"
+<iframe width="560" height="315"
 src="https://www.youtube.com/embed/puMX4z3NjGE"
-title="Demonstração do App"
+title="Demo do Aplicativo"
+frameborder="0"
 allowfullscreen>
 </iframe>
 
 </div>
-
-</div>
-
-
-
-<div class="container">
-
-<h2 class="section-title">Integrantes do Grupo</h2>
-
-<ul>
-
-<li>Bruney Mota Trindade</li>
-<li>Joao Caio Da Silva Santos</li>
-<li>Maria Eduarda Alves Gaia</li>
-<li>Maria Eduarda Natal Comelli</li>
-
-</ul>
 
 </div>
 
@@ -358,48 +318,38 @@ allowfullscreen>
 
 <script>
 
-const slider = document.querySelector('.carousel');
+const track = document.querySelector(".carousel-track")
 
-let isDown = false;
-let startX;
-let scrollLeft;
+let isDown = false
+let startX
+let scrollLeft
 
-slider.addEventListener('mousedown', (e) => {
+track.addEventListener("mousedown",(e)=>{
+isDown = true
+track.style.cursor="grabbing"
+startX = e.pageX - track.offsetLeft
+scrollLeft = track.scrollLeft
+})
 
-isDown = true;
-slider.style.cursor = "grabbing";
+track.addEventListener("mouseleave",()=>{
+isDown=false
+track.style.cursor="grab"
+})
 
-startX = e.pageX - slider.offsetLeft;
-scrollLeft = slider.scrollLeft;
+track.addEventListener("mouseup",()=>{
+isDown=false
+track.style.cursor="grab"
+})
 
-});
+track.addEventListener("mousemove",(e)=>{
+if(!isDown) return
+e.preventDefault()
 
-slider.addEventListener('mouseleave', () => {
+const x = e.pageX - track.offsetLeft
+const walk = (x - startX) * 2
 
-isDown = false;
-slider.style.cursor = "grab";
-
-});
-
-slider.addEventListener('mouseup', () => {
-
-isDown = false;
-slider.style.cursor = "grab";
-
-});
-
-slider.addEventListener('mousemove', (e) => {
-
-if(!isDown) return;
-
-e.preventDefault();
-
-const x = e.pageX - slider.offsetLeft;
-const walk = (x - startX) * 2;
-
-slider.scrollLeft = scrollLeft - walk;
-
-});
+track.scrollLeft = scrollLeft - walk
+})
 
 </script>
 
