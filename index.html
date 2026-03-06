@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,8 +19,8 @@ color:white;
 
 header{
 text-align:center;
-padding:80px 20px;
-background:#141427;
+padding:100px 20px;
+background:linear-gradient(135deg,#141427,#1c1c35);
 }
 
 header h1{
@@ -55,6 +56,12 @@ padding:20px;
 border-radius:10px;
 }
 
+.card img{
+width:100%;
+border-radius:8px;
+margin-bottom:10px;
+}
+
 footer{
 text-align:center;
 padding:30px;
@@ -67,15 +74,38 @@ color:#a855f7;
 text-decoration:none;
 }
 
+.github-btn{
+display:inline-block;
+margin-top:15px;
+padding:12px 22px;
+background:#a855f7;
+color:white;
+border-radius:6px;
+}
+
+.github-btn:hover{
+background:#9333ea;
+}
+
+ul{
+line-height:28px;
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <h1>Fluent Corp</h1>
+
 <p>Aplicativo de aprendizado de idiomas desenvolvido com Flutter e Node.js</p>
+
 </header>
+
+
 
 <div class="container">
 
@@ -93,6 +123,8 @@ com banco de dados MySQL e uma interface mobile desenvolvida em Flutter.
 </p>
 
 </div>
+
+
 
 <div class="container">
 
@@ -124,6 +156,39 @@ com banco de dados MySQL e uma interface mobile desenvolvida em Flutter.
 
 </div>
 
+
+
+<div class="container">
+
+<h2 class="section-title">Arquitetura do Sistema</h2>
+
+<p>
+O sistema segue uma arquitetura cliente-servidor composta por três camadas principais:
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Frontend</h3>
+<p>Aplicativo mobile desenvolvido em Flutter responsável pela interface com o usuário.</p>
+</div>
+
+<div class="card">
+<h3>Backend</h3>
+<p>API desenvolvida em Node.js responsável pelas regras de negócio e comunicação com o banco.</p>
+</div>
+
+<div class="card">
+<h3>Banco de Dados</h3>
+<p>Banco MySQL responsável pelo armazenamento das informações do sistema.</p>
+</div>
+
+</div>
+
+</div>
+
+
+
 <div class="container">
 
 <h2 class="section-title">Funcionalidades</h2>
@@ -150,6 +215,8 @@ com banco de dados MySQL e uma interface mobile desenvolvida em Flutter.
 
 </div>
 
+
+
 <div class="container">
 
 <h2 class="section-title">Integrantes do Grupo</h2>
@@ -163,15 +230,42 @@ com banco de dados MySQL e uma interface mobile desenvolvida em Flutter.
 
 </div>
 
+
+
+<div class="container">
+
+<h2 class="section-title">Interface do Aplicativo</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="images/login.png">
+<p>Tela de Login</p>
+</div>
+
+<div class="card">
+<img src="images/cadastro.png">
+<p>Tela de Cadastro</p>
+</div>
+
+<div class="card">
+<img src="images/home.png">
+<p>Tela Principal</p>
+</div>
+
+</div>
+
+</div>
+
+
+
 <footer>
 
 <p>Projeto acadêmico – 2026</p>
 
-<p>
-<a href="https://github.com/bruney1991/FluentCorp">
-Ver repositório no GitHub
+<a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">
+Ver Projeto no GitHub
 </a>
-</p>
 
 </footer>
 
