@@ -11,37 +11,59 @@
 <style>
 
 body{
-font-family:Arial;
+font-family:Arial,Helvetica,sans-serif;
 margin:0;
 background:#0f0f1a;
 color:white;
-text-align:center;
+overflow-x:hidden;
 }
 
+/* HEADER */
+
 header{
-padding:80px 20px;
+text-align:center;
+padding:100px 20px;
 background:linear-gradient(135deg,#141427,#1c1c35);
 }
 
 .logo{
-width:120px;
-margin-bottom:10px;
+width:90px;
+margin-bottom:20px;
 }
 
 header h1{
 font-size:48px;
 color:#a855f7;
-margin:10px 0;
+margin:0;
 }
 
 header p{
 font-size:20px;
+margin-top:10px;
 }
+
+.github-btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 22px;
+background:#a855f7;
+color:white;
+border-radius:6px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.github-btn:hover{
+background:#9333ea;
+}
+
+/* SEÇÕES */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:50px 20px;
+padding:60px 20px;
+text-align:center;
 }
 
 .section-title{
@@ -50,9 +72,11 @@ color:#a855f7;
 margin-bottom:30px;
 }
 
+/* CARDS */
+
 .cards{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
 }
 
@@ -64,77 +88,81 @@ transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transform:translateY(-10px);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
-.github-btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 24px;
-background:#a855f7;
-color:white;
-border-radius:8px;
-text-decoration:none;
+/* LISTA */
+
+ul{
+list-style:none;
+padding:0;
 }
 
-.github-btn:hover{
-background:#9333ea;
-}
-
-/* ARQUITETURA */
-
-.architecture{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:30px;
-flex-wrap:wrap;
-}
-
-.arch-box{
-background:#1c1c35;
-padding:20px 30px;
-border-radius:10px;
-font-weight:bold;
-}
-
-.arrow{
-font-size:28px;
-color:#a855f7;
+ul li{
+margin:10px 0;
+font-size:18px;
 }
 
 /* CARROSSEL */
 
-.carousel-container{
-overflow:hidden;
-cursor:grab;
-padding:20px 0;
+.carousel{
+perspective:1200px;
+margin-top:40px;
 }
 
-.carousel{
+.carousel-track{
 display:flex;
 gap:30px;
-user-select:none;
+cursor:grab;
+transform-style:preserve-3d;
 }
 
-.carousel img{
-width:260px;
-border-radius:12px;
+.carousel-track img{
+width:250px;
+border-radius:15px;
+box-shadow:0 25px 50px rgba(0,0,0,0.6);
+transition:transform 0.4s;
+}
+
+.carousel-track img:hover{
+transform:scale(1.08) rotateY(8deg);
 }
 
 /* VIDEO */
 
-.video{
-margin-top:40px;
+.video-container{
+margin-top:60px;
+display:flex;
+justify-content:center;
+}
+
+.video-container iframe{
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.5);
 }
 
 /* FOOTER */
 
 footer{
-margin-top:60px;
-padding:40px;
+text-align:center;
+padding:30px;
 background:#141427;
+margin-top:40px;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+header h1{
+font-size:36px;
+}
+
+.carousel-track img{
+width:200px;
+}
+
 }
 
 </style>
@@ -152,7 +180,7 @@ background:#141427;
 <p>Aplicativo de aprendizado de idiomas desenvolvido com Flutter e Node.js</p>
 
 <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">
-Acessar repositório
+Acessar Repositório
 </a>
 
 </header>
@@ -166,12 +194,12 @@ Acessar repositório
 <p>
 O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo
 de auxiliar usuários no aprendizado de novos idiomas através de uma interface
-simples e interativa.
+simples, moderna e interativa.
 </p>
 
 <p>
-O sistema possui uma API desenvolvida em Node.js conectada ao banco de dados
-MySQL e uma interface mobile desenvolvida em Flutter.
+O sistema utiliza uma API desenvolvida em Node.js com Sequelize para comunicação
+com banco de dados MySQL e um aplicativo mobile desenvolvido em Flutter.
 </p>
 
 </div>
@@ -186,22 +214,22 @@ MySQL e uma interface mobile desenvolvida em Flutter.
 
 <div class="card">
 <h3>📱 Flutter</h3>
-<p>Interface mobile do aplicativo.</p>
+<p>Framework utilizado para desenvolvimento da interface mobile.</p>
 </div>
 
 <div class="card">
 <h3>⚙️ Node.js</h3>
-<p>Backend responsável pela API.</p>
-</div>
-
-<div class="card">
-<h3>🧠 Sequelize</h3>
-<p>ORM utilizado para integração com o banco.</p>
+<p>Responsável pela API e lógica do sistema.</p>
 </div>
 
 <div class="card">
 <h3>🗄️ MySQL</h3>
-<p>Banco de dados do sistema.</p>
+<p>Banco de dados responsável pelo armazenamento das informações.</p>
+</div>
+
+<div class="card">
+<h3>🔗 Sequelize</h3>
+<p>ORM utilizado para comunicação entre Node.js e MySQL.</p>
 </div>
 
 </div>
@@ -214,19 +242,13 @@ MySQL e uma interface mobile desenvolvida em Flutter.
 
 <h2 class="section-title">Arquitetura do Sistema</h2>
 
-<div class="architecture">
+<p>O sistema segue uma arquitetura cliente-servidor:</p>
 
-<div class="arch-box">Flutter App</div>
-
-<div class="arrow">→</div>
-
-<div class="arch-box">API Node.js</div>
-
-<div class="arrow">→</div>
-
-<div class="arch-box">Banco MySQL</div>
-
-</div>
+<ul>
+<li>📱 Aplicativo Mobile (Flutter)</li>
+<li>⚙️ API Backend (Node.js)</li>
+<li>🗄️ Banco de Dados (MySQL)</li>
+</ul>
 
 </div>
 
@@ -238,37 +260,14 @@ MySQL e uma interface mobile desenvolvida em Flutter.
 
 <div class="cards">
 
-<div class="card">
-<h3>👤 Cadastro de usuários</h3>
-</div>
-
-<div class="card">
-<h3>🔐 Login seguro</h3>
-</div>
-
-<div class="card">
-<h3>🌍 Seleção de idioma</h3>
-</div>
-
-<div class="card">
-<h3>📊 Definição de nível</h3>
-</div>
-
-<div class="card">
-<h3>🗓️ Planejamento de estudos</h3>
-</div>
-
-<div class="card">
-<h3>🧠 Flashcards</h3>
-</div>
-
-<div class="card">
-<h3>💬 Conversação</h3>
-</div>
-
-<div class="card">
-<h3>🎧 Músicas e podcasts</h3>
-</div>
+<div class="card">Cadastro de usuários</div>
+<div class="card">Login de usuários</div>
+<div class="card">Seleção de idioma</div>
+<div class="card">Definição de nível de conhecimento</div>
+<div class="card">Flashcards de aprendizado</div>
+<div class="card">Treino de conversação</div>
+<div class="card">Conteúdo em áudio (músicas e podcasts)</div>
+<div class="card">Planejamento de estudos personalizado</div>
 
 </div>
 
@@ -278,11 +277,26 @@ MySQL e uma interface mobile desenvolvida em Flutter.
 
 <div class="container">
 
+<h2 class="section-title">Integrantes do Grupo</h2>
+
+<ul>
+<li>Bruney Mota Trindade</li>
+<li>Joao Caio Da Silva Santos</li>
+<li>Maria Eduarda Alves Gaia</li>
+<li>Maria Eduarda Natal Comelli</li>
+</ul>
+
+</div>
+
+
+
+<div class="container">
+
 <h2 class="section-title">Interface do Aplicativo</h2>
 
-<div class="carousel-container">
+<div class="carousel">
 
-<div class="carousel" id="carousel">
+<div class="carousel-track">
 
 <img src="images/F01_INICIAL.png">
 <img src="images/F02_CADASTRO.png">
@@ -302,29 +316,16 @@ MySQL e uma interface mobile desenvolvida em Flutter.
 
 
 
-<div class="video">
+<div class="video-container">
 
-<h2 class="section-title">Demonstração do Aplicativo</h2>
-
-<iframe width="320" height="560"
+<iframe width="560" height="315"
 src="https://www.youtube.com/embed/puMX4z3NjGE"
+title="Demo do Aplicativo"
+frameborder="0"
 allowfullscreen>
 </iframe>
 
 </div>
-
-</div>
-
-
-
-<div class="container">
-
-<h2 class="section-title">Integrantes do Grupo</h2>
-
-<p>Bruney Mota Trindade</p>
-<p>Joao Caio Da Silva Santos</p>
-<p>Maria Eduarda Alves Gaia</p>
-<p>Maria Eduarda Natal Comelli</p>
 
 </div>
 
@@ -340,47 +341,38 @@ allowfullscreen>
 
 <script>
 
-const slider = document.getElementById('carousel');
+const slider = document.querySelector(".carousel-track")
 
-let isDown = false;
-let startX;
-let scrollLeft;
+let isDown=false
+let startX
+let scrollLeft
 
-slider.addEventListener('mousedown', (e)=>{
+slider.addEventListener("mousedown",(e)=>{
+isDown=true
+slider.style.cursor="grabbing"
+startX=e.pageX-slider.offsetLeft
+scrollLeft=slider.scrollLeft
+})
 
-isDown = true;
+slider.addEventListener("mouseleave",()=>{
+isDown=false
+slider.style.cursor="grab"
+})
 
-startX = e.pageX - slider.offsetLeft;
+slider.addEventListener("mouseup",()=>{
+isDown=false
+slider.style.cursor="grab"
+})
 
-scrollLeft = slider.scrollLeft;
+slider.addEventListener("mousemove",(e)=>{
+if(!isDown) return
+e.preventDefault()
 
-});
+const x=e.pageX-slider.offsetLeft
+const walk=(x-startX)*2
 
-slider.addEventListener('mouseleave', ()=>{
-
-isDown=false;
-
-});
-
-slider.addEventListener('mouseup', ()=>{
-
-isDown=false;
-
-});
-
-slider.addEventListener('mousemove',(e)=>{
-
-if(!isDown) return;
-
-e.preventDefault();
-
-const x = e.pageX - slider.offsetLeft;
-
-const walk = (x - startX) * 2;
-
-slider.scrollLeft = scrollLeft - walk;
-
-});
+slider.scrollLeft=scrollLeft-walk
+})
 
 </script>
 
