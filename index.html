@@ -16,7 +16,7 @@ body {
 /* HERO / HEADER */
 header {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px 80px 20px;
   background: linear-gradient(135deg, #141427, #1c1c35);
   display: flex;
   flex-direction: column;
@@ -24,62 +24,65 @@ header {
 }
 
 .logo-container {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .logo-main {
   width: 100%;
-  max-width: 350px; /* Ajuste o tamanho do logo aqui */
+  max-width: 400px; /* Tamanho ideal para o logo com nome */
   height: auto;
-  /* O filtro abaixo ajuda a integrar a imagem ao fundo escuro */
-  filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.2));
-  transition: transform 0.3s ease;
+  /* Brilho suave para integrar o logo ao fundo escuro */
+  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4));
+  transition: 0.3s;
 }
 
 .logo-main:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 header p {
-  font-size: 22px;
+  font-size: 20px;
   color: #d1d5db;
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto 40px auto;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .cta a {
   background: #a855f7;
-  padding: 18px 40px;
-  border-radius: 10px;
+  padding: 18px 45px;
+  border-radius: 12px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   transition: 0.3s;
-  font-size: 20px;
+  font-size: 18px;
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
 }
 
 .cta a:hover {
   background: #9333ea;
   transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
 }
 
-/* CONTAINER GERAL */
+/* CONTAINER */
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
 .section-title {
   font-size: 34px;
   color: #a855f7;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
+  position: relative;
 }
 
-/* CARDS TECNOLOGIAS/FUNCIONALIDADES */
+/* CARDS */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -89,70 +92,61 @@ header p {
 .card {
   background: #1c1c35;
   padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   transition: 0.3s;
-  text-align: center;
 }
 
 .card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+  transform: translateY(-10px);
+  background: #242442;
 }
 
 .tech-icon {
   font-size: 45px;
   margin-bottom: 15px;
+  display: block;
 }
 
 /* INTERFACE GRID */
 .interface-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   justify-items: center;
 }
 
 .interface-card, .video-card {
   width: 100%;
-  max-width: 320px;
-  height: 640px;
-  border-radius: 28px;
+  max-width: 300px;
+  height: 600px;
+  border-radius: 30px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-  transition: 0.4s;
-  background: #1c1c35;
+  box-shadow: 0 15px 45px rgba(0,0,0,0.5);
+  background: #000;
+  border: 4px solid #1c1c35;
 }
 
 .interface-card img, .video-card iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: none;
-}
-
-.interface-card:hover, .video-card:hover {
-  transform: scale(1.04);
-  box-shadow: 0 20px 50px rgba(168,85,247,0.3);
 }
 
 .video-caption {
+  margin-top: 15px;
   color: #a855f7;
-  font-size: 18px;
-  margin: 15px 0;
-  text-align: center;
   font-weight: bold;
 }
 
-/* LISTA DE EQUIPE */
-ul {
+/* LISTA INTEGRANTES */
+.team-list {
   list-style: none;
   padding: 0;
   font-size: 20px;
-  line-height: 2.2;
+  line-height: 2.5;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 60px 20px;
@@ -163,26 +157,22 @@ footer {
 .github-btn {
   display: inline-block;
   margin-top: 20px;
-  padding: 16px 32px;
-  background: #a855f7;
+  padding: 15px 30px;
+  background: #333;
   color: white;
   border-radius: 8px;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
   transition: 0.3s;
 }
 
 .github-btn:hover {
-  background: #9333ea;
-  transform: scale(1.05);
+  background: #444;
 }
 
-/* RESPONSIVIDADE */
 @media (max-width: 768px) {
-  header { padding: 50px 20px; }
-  .logo-main { max-width: 250px; }
+  .logo-main { max-width: 280px; }
   header p { font-size: 18px; }
-  .section-title { font-size: 28px; }
 }
 </style>
 </head>
@@ -190,7 +180,7 @@ footer {
 
 <header>
   <div class="logo-container">
-    <img src="logo.png" alt="Fluent Corp" class="logo-main">
+    <img src="images/logo.png" alt="Fluent Corp Logo" class="logo-main">
   </div>
   
   <p>Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico utilizando Flutter no frontend e Node.js no backend.</p>
@@ -200,47 +190,23 @@ footer {
   </div>
 </header>
 
-<div class="container" id="sobre">
+<div class="container">
   <h2 class="section-title">Sobre o Projeto</h2>
   <p>O Fluent Corp é um aplicativo acadêmico que auxilia no aprendizado de idiomas com interface simples, moderna e interativa.</p>
   <p>O sistema usa Flutter no front, Node.js + Sequelize no backend, e MySQL como banco de dados.</p>
 </div>
 
 <div class="container">
-  <h2 class="section-title">Arquitetura da Aplicação</h2>
-  <div class="cards" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    <div class="card" style="background:#7c3aed; min-width: 200px;">Aplicativo Mobile<br><strong>Flutter</strong></div>
-    <div class="card" style="background:#2563eb; min-width: 200px;">API Backend<br><strong>Node.js</strong></div>
-    <div class="card" style="background:#f43f5e; min-width: 200px;">ORM<br><strong>Sequelize</strong></div>
-    <div class="card" style="background:#16a34a; min-width: 200px;">Banco de Dados<br><strong>MySQL</strong></div>
-  </div>
-</div>
-
-<div class="container" id="tecnologias">
   <h2 class="section-title">Tecnologias Utilizadas</h2>
   <div class="cards">
-    <div class="card"><div class="tech-icon">📱</div><h3>Flutter</h3><p>Framework utilizado para desenvolvimento da interface mobile.</p></div>
-    <div class="card"><div class="tech-icon">⚙️</div><h3>Node.js</h3><p>Backend responsável pela API e comunicação com o banco de dados.</p></div>
-    <div class="card"><div class="tech-icon">🗄️</div><h3>Sequelize</h3><p>ORM utilizado para interação com o banco de dados MySQL.</p></div>
-    <div class="card"><div class="tech-icon">💾</div><h3>MySQL</h3><p>Banco de dados responsável pelo armazenamento das informações.</p></div>
+    <div class="card"><span class="tech-icon">📱</span><h3>Flutter</h3><p>Interface Mobile</p></div>
+    <div class="card"><span class="tech-icon">⚙️</span><h3>Node.js</h3><p>API Backend</p></div>
+    <div class="card"><span class="tech-icon">🗄️</span><h3>Sequelize</h3><p>ORM Database</p></div>
+    <div class="card"><span class="tech-icon">💾</span><h3>MySQL</h3><p>Banco de Dados</p></div>
   </div>
 </div>
 
-<div class="container" id="funcionalidades">
-  <h2 class="section-title">Funcionalidades</h2>
-  <div class="cards">
-    <div class="card"><p>📝 Cadastro de usuários</p></div>
-    <div class="card"><p>🔑 Login de usuários</p></div>
-    <div class="card"><p>🌐 Gerenciamento de dados via API</p></div>
-    <div class="card"><p>📱 Interface mobile com Flutter</p></div>
-    <div class="card"><p>🗣️ Seleção de idioma</p></div>
-    <div class="card"><p>📊 Nível de conhecimento</p></div>
-    <div class="card"><p>⏰ Disponibilidade de horário</p></div>
-    <div class="card"><p>📈 Perfil e progresso</p></div>
-  </div>
-</div>
-
-<div class="container" id="interface">
+<div class="container">
   <h2 class="section-title">Interface do Aplicativo</h2>
   <div class="interface-grid">
     <div class="interface-card"><img src="images/F01_INICIAL.png" alt="Login"></div>
@@ -256,15 +222,15 @@ footer {
     <div class="interface-card"><img src="images/F11_PERFIL.png" alt="Perfil"></div>
 
     <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0&modestbranding=1" allowfullscreen></iframe>
-      <p class="video-caption">Demonstração em Vídeo</p>
+      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0" allowfullscreen></iframe>
+      <p class="video-caption">Demonstração</p>
     </div>
   </div>
 </div>
 
 <div class="container">
   <h2 class="section-title">Integrantes do Grupo</h2>
-  <ul>
+  <ul class="team-list">
     <li>👨🏻‍🎓 Bruney Mota Trindade</li>
     <li>👨🏻‍🎓 Joao Caio Da Silva Santos</li>
     <li>👩🏻‍🎓 Maria Eduarda Alves Gaia</li>
@@ -274,7 +240,7 @@ footer {
 
 <footer>
   <p>Projeto acadêmico SENAC – 2026</p>
-  <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">Acessar Repositório no GitHub</a>
+  <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">Acessar GitHub</a>
 </footer>
 
 </body>
