@@ -22,23 +22,24 @@ header {
 header h1 {
   font-size: 56px;
   color: #a855f7;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 header p {
   font-size: 22px;
   color: #d1d5db;
   max-width: 700px;
-  margin: auto;
+  margin: 0 auto 50px auto; /* mais espaço abaixo do texto */
 }
 .cta a {
   background: #a855f7;
-  padding: 14px 28px;
+  padding: 16px 32px;
   border-radius: 8px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   transition: 0.3s;
+  font-size: 18px;
 }
 .cta a:hover {
   background: #9333ea;
@@ -80,14 +81,14 @@ header p {
   margin-bottom: 10px;
 }
 
-/* CAROUSEL MOUSE CONTROL */
+/* CAROUSEL AJUSTADO */
 .carousel-container {
   position: relative;
   width: 100%;
-  max-width: 800px;
-  height: 500px;
+  max-width: 900px;
+  height: 600px;
   margin: 40px auto;
-  perspective: 1200px;
+  perspective: 1400px;
   overflow: hidden;
   cursor: grab;
 }
@@ -96,19 +97,19 @@ header p {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.15s ease-out;
+  transition: transform 0.25s ease-out; /* mais suave e lento */
 }
 .carousel-item {
   position: absolute;
-  width: 320px;
-  height: 480px;
+  width: 360px;
+  height: 640px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   backface-visibility: hidden;
 }
 .carousel-item img {
@@ -117,14 +118,14 @@ header p {
   object-fit: cover;
 }
 .carousel-item.active {
-  transform: translate(-50%, -50%) translateZ(280px) scale(1.05);
+  transform: translate(-50%, -50%) translateZ(350px) scale(1.08);
   filter: none;
   opacity: 1;
   z-index: 10;
 }
 .carousel-item {
-  filter: blur(3px) brightness(0.8);
-  opacity: 0.7;
+  filter: blur(2px) brightness(0.85);
+  opacity: 0.85;
   z-index: 1;
 }
 
@@ -135,11 +136,11 @@ header p {
 }
 .video-wrapper {
   position: relative;
-  padding-bottom: 177.78%; /* 9:16 para Shorts vertical */
+  padding-bottom: 177.78%; /* 9:16 vertical para Shorts */
   height: 0;
   overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
 }
 .video-wrapper iframe {
   position: absolute;
@@ -147,6 +148,7 @@ header p {
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 /* TEAM e FOOTER */
@@ -237,9 +239,9 @@ footer {
   </div>
 
   <div class="video-section">
-    <h3 style="color:#a855f7; margin-bottom: 20px;">Demonstração do Aplicativo</h3>
+    <h3 style="color:#a855f7; margin-bottom: 20px; font-size: 28px;">Demonstração do Aplicativo</h3>
     <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/puMX4z3NjGE" title="Demonstração Fluent Corp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/puMX4z3NjGE?rel=0&modestbranding=1" title="Demonstração Fluent Corp" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
 </div>
@@ -260,22 +262,20 @@ footer {
 </footer>
 
 <script>
-// Mouse control no carrossel
+// Mouse control ajustado (mais lento)
 const container = document.getElementById('carouselContainer');
-const carousel = document.getElementById('carousel');
 const items = document.querySelectorAll('.carousel-item');
 const total = items.length;
-
-let center = Math.floor(total / 2); // índice da imagem central
+let center = Math.floor(total / 2);
 
 function update() {
   items.forEach((item, i) => {
     const diff = (i - center + total) % total;
-    const angle = (diff - Math.floor(total / 2)) * (360 / total);
-    const z = diff === 0 ? 280 : 100 - Math.abs(diff) * 40;
-    const scale = diff === 0 ? 1.05 : 0.8 - Math.abs(diff) * 0.1;
-    const opacity = diff === 0 ? 1 : 0.5 + (total - Math.abs(diff)) * 0.05;
-    const blur = diff === 0 ? 0 : 3 + Math.abs(diff);
+    const angle = (diff - Math.floor(total / 2)) * (180 / total); // ângulo menor pra menos giro rápido
+    const z = diff === 0 ? 350 : 150 - Math.abs(diff) * 30;
+    const scale = diff === 0 ? 1.08 : 0.85 - Math.abs(diff) * 0.05;
+    const opacity = diff === 0 ? 1 : 0.7 + (total - Math.abs(diff)) * 0.03;
+    const blur = diff === 0 ? 0 : 1.5 + Math.abs(diff) * 0.5;
 
     item.style.transform = `translate(-50%, -50%) rotateY(${angle}deg) translateZ(${z}px) scale(${scale})`;
     item.style.opacity = opacity;
@@ -292,8 +292,7 @@ container.addEventListener('mousemove', (e) => {
   update();
 });
 
-// Inicializa
-update();
+update(); // Inicializa
 </script>
 
 </body>
