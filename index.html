@@ -16,7 +16,7 @@ body {
 /* HERO / HEADER */
 header {
   text-align: center;
-  padding: 60px 20px 80px 20px;
+  padding: 80px 20px;
   background: linear-gradient(135deg, #141427, #1c1c35);
   display: flex;
   flex-direction: column;
@@ -29,57 +29,49 @@ header {
 
 .logo-main {
   width: 100%;
-  max-width: 400px; /* Tamanho ideal para o logo com nome */
+  max-width: 380px; 
   height: auto;
-  /* Brilho suave para integrar o logo ao fundo escuro */
-  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4));
-  transition: 0.3s;
-}
-
-.logo-main:hover {
-  transform: scale(1.03);
+  /* O filter abaixo ajuda a suavizar bordas se a imagem tiver resquícios de fundo */
+  filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.3));
 }
 
 header p {
-  font-size: 20px;
+  font-size: 22px;
   color: #d1d5db;
-  max-width: 750px;
+  max-width: 700px;
   margin: 0 auto 40px auto;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .cta a {
   background: #a855f7;
-  padding: 18px 45px;
-  border-radius: 12px;
+  padding: 18px 40px;
+  border-radius: 10px;
   color: white;
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
   transition: 0.3s;
-  font-size: 18px;
-  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+  font-size: 20px;
 }
 
 .cta a:hover {
   background: #9333ea;
   transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
 }
 
-/* CONTAINER */
+/* CONTAINER GERAL */
 .container {
   max-width: 1100px;
   margin: auto;
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
 .section-title {
   font-size: 34px;
   color: #a855f7;
-  margin-bottom: 50px;
-  position: relative;
+  margin-bottom: 40px;
 }
 
 /* CARDS */
@@ -92,87 +84,70 @@ header p {
 .card {
   background: #1c1c35;
   padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  background: #242442;
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
 .tech-icon {
   font-size: 45px;
   margin-bottom: 15px;
-  display: block;
 }
 
 /* INTERFACE GRID */
 .interface-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   justify-items: center;
 }
 
 .interface-card, .video-card {
   width: 100%;
-  max-width: 300px;
-  height: 600px;
-  border-radius: 30px;
+  max-width: 320px;
+  height: 640px;
+  border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 15px 45px rgba(0,0,0,0.5);
-  background: #000;
-  border: 4px solid #1c1c35;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  transition: 0.4s;
 }
 
 .interface-card img, .video-card iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border: none;
 }
 
-.video-caption {
-  margin-top: 15px;
-  color: #a855f7;
-  font-weight: bold;
-}
-
-/* LISTA INTEGRANTES */
-.team-list {
+/* EQUIPE */
+ul {
   list-style: none;
   padding: 0;
-  font-size: 20px;
-  line-height: 2.5;
+  font-size: 18px;
+  line-height: 32px;
 }
 
 footer {
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px;
   background: #141427;
-  border-top: 1px solid #1c1c35;
 }
 
 .github-btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  background: #333;
+  margin-top: 15px;
+  padding: 14px 28px;
+  background: #a855f7;
   color: white;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
   transition: 0.3s;
-}
-
-.github-btn:hover {
-  background: #444;
-}
-
-@media (max-width: 768px) {
-  .logo-main { max-width: 280px; }
-  header p { font-size: 18px; }
 }
 </style>
 </head>
@@ -180,57 +155,64 @@ footer {
 
 <header>
   <div class="logo-container">
-    <img src="images/logo.png" alt="Fluent Corp Logo" class="logo-main">
+    <img src="images/logo.png" alt="Fluent Corp" class="logo-main">
   </div>
-  
   <p>Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico utilizando Flutter no frontend e Node.js no backend.</p>
-  
   <div class="cta">
     <a href="https://github.com/bruney1991/FluentCorp" target="_blank">Ver no GitHub</a>
   </div>
 </header>
 
-<div class="container">
+<div class="container" id="sobre">
   <h2 class="section-title">Sobre o Projeto</h2>
   <p>O Fluent Corp é um aplicativo acadêmico que auxilia no aprendizado de idiomas com interface simples, moderna e interativa.</p>
   <p>O sistema usa Flutter no front, Node.js + Sequelize no backend, e MySQL como banco de dados.</p>
 </div>
 
 <div class="container">
-  <h2 class="section-title">Tecnologias Utilizadas</h2>
-  <div class="cards">
-    <div class="card"><span class="tech-icon">📱</span><h3>Flutter</h3><p>Interface Mobile</p></div>
-    <div class="card"><span class="tech-icon">⚙️</span><h3>Node.js</h3><p>API Backend</p></div>
-    <div class="card"><span class="tech-icon">🗄️</span><h3>Sequelize</h3><p>ORM Database</p></div>
-    <div class="card"><span class="tech-icon">💾</span><h3>MySQL</h3><p>Banco de Dados</p></div>
+  <h2 class="section-title">Arquitetura da Aplicação</h2>
+  <div class="cards" style="display: flex; flex-direction: column; align-items: center; gap: 25px;">
+    <div class="card" style="background:#7c3aed; width: 250px;">Aplicativo Mobile<br>Flutter</div>
+    <div class="card" style="background:#2563eb; width: 250px;">API Backend<br>Node.js</div>
+    <div class="card" style="background:#f43f5e; width: 250px;">ORM<br>Sequelize</div>
+    <div class="card" style="background:#16a34a; width: 250px;">Banco de Dados<br>MySQL</div>
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="tecnologias">
+  <h2 class="section-title">Tecnologias Utilizadas</h2>
+  <div class="cards">
+    <div class="card"><div class="tech-icon">📱</div><h3>Flutter</h3><p>Framework para interface mobile.</p></div>
+    <div class="card"><div class="tech-icon">⚙️</div><h3>Node.js</h3><p>Backend e API.</p></div>
+    <div class="card"><div class="tech-icon">🗄️</div><h3>Sequelize</h3><p>ORM para banco de dados.</p></div>
+    <div class="card"><div class="tech-icon">💾</div><h3>MySQL</h3><p>Armazenamento de dados.</p></div>
+  </div>
+</div>
+
+<div class="container" id="funcionalidades">
+  <h2 class="section-title">Funcionalidades</h2>
+  <div class="cards">
+    <div class="card"><p>📝 Cadastro e Login</p></div>
+    <div class="card"><p>🌐 Gestão via API</p></div>
+    <div class="card"><p>🗣️ Seleção de Idiomas</p></div>
+    <div class="card"><p>📈 Progresso do Usuário</p></div>
+  </div>
+</div>
+
+<div class="container" id="interface">
   <h2 class="section-title">Interface do Aplicativo</h2>
   <div class="interface-grid">
-    <div class="interface-card"><img src="images/F01_INICIAL.png" alt="Login"></div>
-    <div class="interface-card"><img src="images/F02_CADASTRO.png" alt="Cadastro"></div>
-    <div class="interface-card"><img src="images/F03_IDIOMA.png" alt="Idioma"></div>
-    <div class="interface-card"><img src="images/F04_NIVEL.png" alt="Nível"></div>
-    <div class="interface-card"><img src="images/F05_DISP.png" alt="Horário"></div>
-    <div class="interface-card"><img src="images/F06_APRES.png" alt="Apresentação"></div>
-    <div class="interface-card"><img src="images/F07_HOME.png" alt="Home"></div>
-    <div class="interface-card"><img src="images/F08_CARD.png" alt="Flashcards"></div>
-    <div class="interface-card"><img src="images/F09_CONV.png" alt="Conversação"></div>
-    <div class="interface-card"><img src="images/F10_AUDIO.png" alt="Músicas"></div>
-    <div class="interface-card"><img src="images/F11_PERFIL.png" alt="Perfil"></div>
-
+    <div class="interface-card"><img src="images/F01_INICIAL.png"></div>
+    <div class="interface-card"><img src="images/F07_HOME.png"></div>
     <div class="video-card">
-      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI?rel=0" allowfullscreen></iframe>
-      <p class="video-caption">Demonstração</p>
+      <iframe src="https://www.youtube.com/embed/iFsvgexkvhI" allowfullscreen></iframe>
     </div>
   </div>
 </div>
 
 <div class="container">
   <h2 class="section-title">Integrantes do Grupo</h2>
-  <ul class="team-list">
+  <ul>
     <li>👨🏻‍🎓 Bruney Mota Trindade</li>
     <li>👨🏻‍🎓 Joao Caio Da Silva Santos</li>
     <li>👩🏻‍🎓 Maria Eduarda Alves Gaia</li>
@@ -240,7 +222,7 @@ footer {
 
 <footer>
   <p>Projeto acadêmico SENAC – 2026</p>
-  <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">Acessar GitHub</a>
+  <a class="github-btn" href="https://github.com/bruney1991/FluentCorp" target="_blank">GitHub</a>
 </footer>
 
 </body>
