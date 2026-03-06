@@ -12,25 +12,28 @@
 <style>
 
 body{
-font-family: Arial;
+font-family: Arial, Helvetica, sans-serif;
 margin:0;
 background:#0f0f1a;
 color:white;
 text-align:center;
 }
 
+/* HEADER */
+
 header{
-padding:80px 20px;
-background:#141427;
+padding:90px 20px;
+background:linear-gradient(135deg,#141427,#1c1c35);
 }
 
 .logo{
-width:120px;
-margin-bottom:20px;
+max-width:140px;
+height:auto;
+margin-bottom:15px;
 }
 
 header h1{
-font-size:46px;
+font-size:48px;
 color:#a855f7;
 margin-bottom:10px;
 }
@@ -40,17 +43,36 @@ font-size:20px;
 color:#d1d1d1;
 }
 
+.github-btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 24px;
+background:#a855f7;
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.github-btn:hover{
+background:#9333ea;
+}
+
+/* CONTAINERS */
+
 .container{
 max-width:1100px;
 margin:auto;
-padding:50px 20px;
+padding:60px 20px;
 }
 
 .section-title{
 font-size:34px;
 color:#a855f7;
-margin-bottom:25px;
+margin-bottom:30px;
 }
+
+/* CARDS */
 
 .cards{
 display:grid;
@@ -64,33 +86,21 @@ padding:20px;
 border-radius:10px;
 }
 
-.card img{
-width:100%;
-border-radius:8px;
+/* FUNCIONALIDADES */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
-ul{
-list-style:none;
-padding:0;
+.feature{
+background:#1c1c35;
+padding:20px;
+border-radius:10px;
 }
 
-ul li{
-margin:8px 0;
-}
-
-.github-btn{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#a855f7;
-color:white;
-border-radius:6px;
-text-decoration:none;
-}
-
-.github-btn:hover{
-background:#9333ea;
-}
+/* CARROSSEL */
 
 .carousel{
 display:flex;
@@ -106,8 +116,27 @@ border-radius:12px;
 scroll-snap-align:center;
 }
 
+/* ARQUITETURA */
+
+.architecture{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:15px;
+font-size:18px;
+}
+
+.box{
+background:#1c1c35;
+padding:20px 30px;
+border-radius:10px;
+width:250px;
+}
+
+/* VIDEO */
+
 .video-container{
-margin-top:30px;
+margin-top:20px;
 display:flex;
 justify-content:center;
 }
@@ -116,17 +145,12 @@ iframe{
 border-radius:10px;
 }
 
+/* FOOTER */
+
 footer{
 margin-top:60px;
 padding:30px;
 background:#141427;
-}
-
-.diagram{
-margin-top:30px;
-background:#1c1c35;
-padding:30px;
-border-radius:10px;
 }
 
 </style>
@@ -155,13 +179,13 @@ Acessar Repositório no GitHub
 
 <p>
 O Fluent Corp é um aplicativo desenvolvido como projeto acadêmico com o objetivo
-de auxiliar usuários no aprendizado de novos idiomas por meio de uma plataforma
-interativa e acessível.
+de auxiliar usuários no aprendizado de novos idiomas através de uma plataforma
+interativa, simples e acessível.
 </p>
 
 <p>
-O sistema utiliza uma arquitetura cliente-servidor composta por um aplicativo
-mobile desenvolvido em Flutter, uma API em Node.js e banco de dados MySQL.
+O sistema utiliza uma arquitetura cliente-servidor composta por aplicativo mobile,
+API backend e banco de dados relacional.
 </p>
 
 </div>
@@ -179,17 +203,17 @@ mobile desenvolvido em Flutter, uma API em Node.js e banco de dados MySQL.
 
 <div class="card">
 <h3>Node.js</h3>
-<p>Backend responsável pela API e comunicação com o banco de dados.</p>
+<p>Responsável pelo backend e criação da API REST.</p>
 </div>
 
 <div class="card">
 <h3>Sequelize</h3>
-<p>ORM utilizado para interação com o banco de dados MySQL.</p>
+<p>ORM utilizado para comunicação com o banco de dados.</p>
 </div>
 
 <div class="card">
 <h3>MySQL</h3>
-<p>Banco de dados responsável pelo armazenamento das informações.</p>
+<p>Banco de dados utilizado para armazenamento das informações.</p>
 </div>
 
 </div>
@@ -200,21 +224,37 @@ mobile desenvolvido em Flutter, uma API em Node.js e banco de dados MySQL.
 
 <h2 class="section-title">Funcionalidades</h2>
 
-<ul>
+<div class="features">
 
-<li>Cadastro e autenticação de usuários</li>
+<div class="feature">
+Cadastro e autenticação de usuários
+</div>
 
-<li>Seleção de idioma e nível de aprendizado</li>
+<div class="feature">
+Seleção de idioma para aprendizado
+</div>
 
-<li>Flashcards interativos para estudo</li>
+<div class="feature">
+Definição de nível de conhecimento
+</div>
 
-<li>Treinamento de conversação</li>
+<div class="feature">
+Flashcards para memorização
+</div>
 
-<li>Conteúdos em áudio (músicas e podcasts)</li>
+<div class="feature">
+Treinamento de conversação
+</div>
 
-<li>Perfil do usuário com acompanhamento de progresso</li>
+<div class="feature">
+Conteúdos em áudio (músicas e podcasts)
+</div>
 
-</ul>
+<div class="feature">
+Perfil do usuário e progresso
+</div>
+
+</div>
 
 </div>
 
@@ -222,17 +262,17 @@ mobile desenvolvido em Flutter, uma API em Node.js e banco de dados MySQL.
 
 <h2 class="section-title">Arquitetura do Sistema</h2>
 
-<div class="diagram">
+<div class="architecture">
 
-<p><strong>Frontend:</strong> Aplicativo mobile desenvolvido em Flutter</p>
+<div class="box">Frontend<br>Flutter Mobile App</div>
 
-<p>⬇</p>
+⬇
 
-<p><strong>Backend:</strong> API REST desenvolvida em Node.js</p>
+<div class="box">Backend<br>Node.js API</div>
 
-<p>⬇</p>
+⬇
 
-<p><strong>Banco de Dados:</strong> MySQL gerenciado via Sequelize</p>
+<div class="box">Banco de Dados<br>MySQL + Sequelize</div>
 
 </div>
 
@@ -268,7 +308,7 @@ mobile desenvolvido em Flutter, uma API em Node.js e banco de dados MySQL.
 
 <iframe width="315" height="560"
 src="https://www.youtube.com/embed/puMX4z3NjGE"
-title="YouTube video"
+title="Demonstração do aplicativo"
 frameborder="0"
 allowfullscreen>
 </iframe>
@@ -281,17 +321,10 @@ allowfullscreen>
 
 <h2 class="section-title">Integrantes do Grupo</h2>
 
-<ul>
-
-<li>Bruney Mota Trindade</li>
-
-<li>Joao Caio Da Silva Santos</li>
-
-<li>Maria Eduarda Alves Gaia</li>
-
-<li>Maria Eduarda Natal Comelli</li>
-
-</ul>
+<p>Bruney Mota Trindade</p>
+<p>Joao Caio Da Silva Santos</p>
+<p>Maria Eduarda Alves Gaia</p>
+<p>Maria Eduarda Natal Comelli</p>
 
 </div>
 
