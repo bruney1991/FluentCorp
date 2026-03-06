@@ -215,16 +215,13 @@ footer {
 
 <div class="container">
   <h2 class="section-title">Arquitetura da Aplicação</h2>
-  <div class="arch-diagram-container">
-    <!-- Camadas em diagonal -->
-    <div class="arch-layer">
-      <div class="arch-box" style="background:#7c3aed;">Aplicativo Mobile<br>Flutter</div>
-      <div class="arch-box" style="background:#2563eb;">API Backend<br>Node.js</div>
-    </div>
-    <div class="arch-layer">
-      <div class="arch-box" style="background:#f43f5e;">ORM<br>Sequelize</div>
-      <div class="arch-box" style="background:#16a34a;">Banco de Dados<br>MySQL</div>
-    </div>
+  <div class="cards" style="display: flex; flex-direction: column; align-items: center; gap: 25px;">
+    <div class="card" style="background:#7c3aed;">Aplicativo Mobile<br>Flutter</div>
+    <div class="card" style="background:#2563eb;">API Backend<br>Node.js</div>
+    <div class="card" style="background:#f43f5e;">ORM<br>Sequelize</div>
+    <div class="card" style="background:#16a34a;">Banco de Dados<br>MySQL</div>
+  </div>
+</div>
 
     <!-- SVG setas diagonais -->
     <svg class="arch-svg">
