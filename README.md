@@ -133,3 +133,29 @@ flutter doctor
 ```bash
 flutter run
 ```
+### 6️⃣ $\color{purple}{\text{Executar o Backend}}$
+
+```bash
+cd backend
+```
+```bash
+npm install
+```
+```bash
+npm start
+```
+
+### 7️⃣ $\color{purple}{\text{Executar o App Flutter}}$
+
+```bash
+cd mobile
+```
+```bash
+flutter pub get
+```
+```bash
+flutter doctor
+```
+```bash
+flutter run
+```
