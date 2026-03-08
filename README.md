@@ -64,7 +64,7 @@ _Isso cria a estrutura de pastas:_
  ┃ ┣ 📜 pubspec.yaml
  ┃ ┗ ...
  ┃
- ┣ 📂 landing/              # Landing page (GitHub Pages)
+ ┣ 📂 docs/              # Landing page (GitHub Pages)
  ┃ ┣ 📂 images/
  ┃ ┗ 📜 index.html
  ┃
