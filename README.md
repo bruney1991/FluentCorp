@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-# flutter_application_1
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
 # 🗣️ $\color{purple}{\text{Fluent Corp | Aplicativo de Idiomas}}$ 📱
 
    
@@ -65,18 +47,28 @@ npx sequelize-cli init
 _Isso cria a estrutura de pastas:_
 
 ```
-📦 seu-projeto/
- ┣ 📂 backend/             # Código do Node.js + Sequelize
- ┃ ┣ 📂 migrations/        # Scripts que criam/alteram tabelas
- ┃ ┣ 📂 models/            # Modelos Sequelize
- ┃ ┣ 📂 controllers/       # Regras de negócio
- ┃ ┣ 📂 routes/            # Rotas da API
+📦 FluentCorp/
+ ┣ 📂 backend/              # API Node.js + Sequelize
+ ┃ ┣ 📂 migrations/         # Scripts que criam/alteram tabelas
+ ┃ ┣ 📂 models/             # Modelos Sequelize
+ ┃ ┣ 📂 controllers/        # Regras de negócio
+ ┃ ┣ 📂 routes/             # Rotas da API
  ┃ ┣ 📜 package.json
  ┃ ┗ 📜 server.js
+ ┃
+ ┣ 📂 mobile/               # Aplicativo Flutter
  ┃ ┣ 📂 lib/
+ ┃ ┣ 📂 android/
+ ┃ ┣ 📂 ios/
+ ┃ ┣ 📂 web/
  ┃ ┣ 📜 pubspec.yaml
  ┃ ┗ ...
- ┗ 📜 README.md            # Documentação do projeto
+ ┃
+ ┣ 📂 landing/              # Landing page (GitHub Pages)
+ ┃ ┣ 📂 images/
+ ┃ ┗ 📜 index.html
+ ┃
+ ┗ 📜 README.md             # Documentação do projeto
 
 ```
 
@@ -123,4 +115,3 @@ flutter doctor
 ```bash
 flutter run
 ```
->>>>>>> 1ab029c719cc0355ad65d75044c851773a208db5
