@@ -23,7 +23,7 @@ O **Fluent Corp** foi projetado para oferecer uma experiência de aprendizado fl
 * ⚙️ **Arquitetura Escalável:** Estrutura de pastas organizada seguindo as melhores práticas de desenvolvimento Full-Stack.
 
 
-## 🛠️ $\color{purple}{\text{Projeto Node.js + Sequelize + Flutter}}$
+## 🛠️ $\color{purple}{\text{Tecnologias Utilizadas}}$
 
 O **FluentCorp** é composto por três camadas principais:
 
@@ -49,7 +49,7 @@ Flutter App → Node.js API → MySQL
 <details>
 <summary>
 
-## 🚀 $\color{purple}{\text{Clique aqui para o passo a passo de Clonagem e Instalação}}$
+## $\color{purple}{\text{Clique aqui para o passo a passo de Clonagem e Instalação}}$ 🚀
 </summary>
 
 ### 1️⃣ $\color{purple}{\text{Clonar o Repositório}}$ 
