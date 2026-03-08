@@ -31,7 +31,7 @@
 git clone https://github.com/bruney1991/FluentCorp
 ```
 ```bash
-cd APP_IDIOMAS
+cd FluentCorp
 ```
 
 ### 📥 $\color{purple}{\text{Instalar dependências}}$ 
