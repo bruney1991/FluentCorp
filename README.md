@@ -47,18 +47,28 @@ npx sequelize-cli init
 _Isso cria a estrutura de pastas:_
 
 ```
-📦 seu-projeto/
- ┣ 📂 backend/             # Código do Node.js + Sequelize
- ┃ ┣ 📂 migrations/        # Scripts que criam/alteram tabelas
- ┃ ┣ 📂 models/            # Modelos Sequelize
- ┃ ┣ 📂 controllers/       # Regras de negócio
- ┃ ┣ 📂 routes/            # Rotas da API
+📦 FluentCorp/
+ ┣ 📂 backend/              # API Node.js + Sequelize
+ ┃ ┣ 📂 migrations/         # Scripts que criam/alteram tabelas
+ ┃ ┣ 📂 models/             # Modelos Sequelize
+ ┃ ┣ 📂 controllers/        # Regras de negócio
+ ┃ ┣ 📂 routes/             # Rotas da API
  ┃ ┣ 📜 package.json
  ┃ ┗ 📜 server.js
+ ┃
+ ┣ 📂 mobile/               # Aplicativo Flutter
  ┃ ┣ 📂 lib/
+ ┃ ┣ 📂 android/
+ ┃ ┣ 📂 ios/
+ ┃ ┣ 📂 web/
  ┃ ┣ 📜 pubspec.yaml
  ┃ ┗ ...
- ┗ 📜 README.md            # Documentação do projeto
+ ┃
+ ┣ 📂 landing/              # Landing page (GitHub Pages)
+ ┃ ┣ 📂 images/
+ ┃ ┗ 📜 index.html
+ ┃
+ ┗ 📜 README.md             # Documentação do projeto
 
 ```
 
