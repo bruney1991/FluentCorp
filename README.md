@@ -1,7 +1,11 @@
 # 🗣️ $\color{purple}{\text{Fluent Corp | Aplicativo de Idiomas}}$ 📱
 
-   
-   💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico.
+![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?logo=sequelize&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)  
+
+💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico.
 
 🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
    
@@ -16,7 +20,20 @@
 ## 🛠️ $\color{purple}{\text{Projeto Node.js + Sequelize + Flutter}}$
 
 #### Este projeto consiste em um backend desenvolvido em Node.js com Sequelize para interação com o banco de dados e um frontend em Flutter.
+O **FluentCorp** é dividido em três camadas:
 
+- **Mobile (Flutter)**  
+  Interface do usuário e interação com o sistema.
+
+- **Backend (Node.js + Sequelize)**  
+  API responsável pelas regras de negócio e comunicação com o banco.
+
+- **Banco de Dados (MySQL)**  
+  Armazena usuários e dados da aplicação.
+
+Fluxo da aplicação:
+
+Flutter App → API Node.js → MySQL
 ## 📋 $\color{purple}{\text{Pré-requisitos}}$ 
 
 ⚠️ $\color{red}{\text{Antes de começar, certifique-se de ter instalado em sua máquina:}}$  
