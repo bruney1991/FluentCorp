@@ -7,12 +7,11 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)  
 </div>
 
-💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico.
+💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico no **SENAC**.
 
 🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
    
    *Integrantes do grupo:*  
-   
 -👨🏻‍🎓 Bruney Mota Trindade    
 -👨🏻‍🎓 Joao Caio Da Silva Santos  
 -👩🏻‍🎓 Maria Eduarda Alves Gaia  
