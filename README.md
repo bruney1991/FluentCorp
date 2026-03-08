@@ -1,9 +1,14 @@
+<div align="center">
+
 # 🗣️ $\color{purple}{\text{Fluent Corp | Aplicativo de Idiomas}}$ 📱
 
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
 ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?logo=sequelize&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)  
+</div>
+
+
 
 💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico.
 
