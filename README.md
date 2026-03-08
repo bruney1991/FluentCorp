@@ -11,12 +11,6 @@
 
 🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
    
-## $\color{purple}{\text{👥 Integrantes}}$
--👨🏻‍🎓 Bruney Mota Trindade    
--👨🏻‍🎓 Joao Caio Da Silva Santos  
--👩🏻‍🎓 Maria Eduarda Alves Gaia  
--👩🏻‍🎓 Maria Eduarda Natal Comelli 
-
 
 ## 🛠️ $\color{purple}{\text{Projeto Node.js + Sequelize + Flutter}}$
 
@@ -138,3 +132,11 @@ cd mobile
 flutter pub get
 flutter doctor
 flutter run
+```
+</details>
+
+## $\color{purple}{\text{👥 Integrantes}}$
+-👨🏻‍🎓 Bruney Mota Trindade    
+-👨🏻‍🎓 Joao Caio Da Silva Santos  
+-👩🏻‍🎓 Maria Eduarda Alves Gaia  
+-👩🏻‍🎓 Maria Eduarda Natal Comelli 
