@@ -11,7 +11,7 @@
 
 🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
    
-   *Integrantes do grupo:*  
+## $\color{purple}{\text{👥 Integrantes}}$
 -👨🏻‍🎓 Bruney Mota Trindade    
 -👨🏻‍🎓 Joao Caio Da Silva Santos  
 -👩🏻‍🎓 Maria Eduarda Alves Gaia  
@@ -44,7 +44,7 @@ Flutter App → Node.js API → MySQL
 ✔️ **Flutter**\
 ✔️ **npm (gerenciador de pacotes)**
 
- **Para clonar o repositório , siga os passos abaixo:**
+ **Para clonar o repositório, siga os passos abaixo:**
 ```bash
 git clone https://github.com/bruney1991/FluentCorp.git
 ```
