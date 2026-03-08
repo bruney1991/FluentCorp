@@ -47,7 +47,7 @@ Flutter App → Node.js API → MySQL
 <details>
 <summary>
 
-# 🚀 $\color{purple}{\text{Clique aqui para o passo a passo de Clonagem e Instalação}}$
+## 🚀 $\color{purple}{\text{Clique aqui para o passo a passo de Clonagem e Instalação}}$
 </summary>
 
 ### 1️⃣ $\color{purple}{\text{Clonar o Repositório}}$ 
