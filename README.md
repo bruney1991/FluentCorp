@@ -148,6 +148,6 @@ flutter run
 
 ## $\color{purple}{\text{👥 Integrantes}}$
 -👨🏻‍🎓 Bruney Mota Trindade    
--👨🏻‍🎓 Joao Caio Da Silva Santos  
+-👨🏻‍🎓 João Caio Da Silva Santos  
 -👩🏻‍🎓 Maria Eduarda Alves Gaia  
 -👩🏻‍🎓 Maria Eduarda Natal Comelli 
