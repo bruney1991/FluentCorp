@@ -44,12 +44,10 @@ Flutter App → Node.js API → MySQL
 ✔️ **Flutter**\
 ✔️ **npm (gerenciador de pacotes)**
 
- **Para clonar o repositório, siga os passos abaixo:**
-
 <details>
 <summary>
 
-## 🚀 $\color{purple}{\text{Clique aqui para ver o Passo a Passo de Instalação}}$
+## 🚀 $\color{purple}{\text{Clique aqui para o passo a passo de Clonagem e Instalação}}$
 </summary>
 
 ### 1️⃣ $\color{purple}{\text{Clonar o Repositório}}$ 
