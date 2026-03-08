@@ -45,20 +45,25 @@ Flutter App → Node.js API → MySQL
 ✔️ **npm (gerenciador de pacotes)**
 
  **Para clonar o repositório, siga os passos abaixo:**
+
+<details>
+<summary>
+
+## 🚀 $\color{purple}{\text{Clique aqui para ver o Passo a Passo de Instalação}}$
+</summary>
+
+### 1️⃣ $\color{purple}{\text{Clonar o Repositório}}$ 
 ```bash
 git clone https://github.com/bruney1991/FluentCorp.git
-```
-```bash
 cd FluentCorp
 ```
 
-### 📥 $\color{purple}{\text{Instalar dependências}}$ 
-### 1️⃣ $\color{purple}{\text{Instalar Sequelize e CLI localmente no projeto}}$ 
-
+### 2️⃣ $\color{purple}{\text{Instalar Sequelize e Dependências}}$ 
 ```bash
 npm install sequelize sequelize-cli mysql2
 ```
-### 2️⃣ $\color{purple}{\text{Inicializar Sequelize no projeto}}$
+
+### 3️⃣ $\color{purple}{\text{Inicializar Sequelize no projeto}}$
 ```bash 
 npx sequelize-cli init
 ```
@@ -90,8 +95,8 @@ _Isso cria a estrutura de pastas:_
 
 ```
 
-### 3️⃣ $\color{purple}{\text{Configurar config/config.json}}$
-```
+### 4️⃣ $\color{purple}{\text{Configurar config/config.json}}$
+```json
 {
   "development": {
     "username": "usuario",
@@ -117,45 +122,21 @@ _Isso cria a estrutura de pastas:_
 }
 ```
 
-### 4️⃣ $\color{purple}{\text{Aplicar todas as migrations}}$
-
+### 5️⃣ $\color{purple}{\text{Aplicar as migrations}}$
 ```bash
 npx sequelize-cli db:migrate
 ```
-### 5️⃣ $\color{purple}{\text{Instalar dependências do Flutter}}$
 
-```bash
-flutter pub get
-```
-```bash
-flutter doctor
-```
-```bash
-flutter run
-```
 ### 6️⃣ $\color{purple}{\text{Executar o Backend}}$
-
 ```bash
 cd backend
-```
-```bash
 npm install
-```
-```bash
 npm start
 ```
 
 ### 7️⃣ $\color{purple}{\text{Executar o App Flutter}}$
-
 ```bash
 cd mobile
-```
-```bash
 flutter pub get
-```
-```bash
 flutter doctor
-```
-```bash
 flutter run
-```
