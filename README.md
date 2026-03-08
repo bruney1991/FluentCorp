@@ -46,7 +46,7 @@ Flutter App → Node.js API → MySQL
 
  **Para clonar o repositório , siga os passos abaixo:**
 ```bash
-git clone https://github.com/bruney1991/FluentCorp
+git clone https://github.com/bruney1991/FluentCorp.git
 ```
 ```bash
 cd FluentCorp
