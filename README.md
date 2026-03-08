@@ -7,7 +7,7 @@
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)  
 </div>
 
-💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico no **SENAC**.
+💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico no **SENAC**
 
 🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
 
@@ -27,14 +27,11 @@ O **Fluent Corp** foi projetado para oferecer uma experiência de aprendizado fl
 
 O **FluentCorp** é composto por três camadas principais:
 
-**📱 Mobile (Flutter)**  
-Interface do usuário e interação com o sistema.
+**📱 Mobile ([Flutter](https://flutter.dev/))** Interface do usuário e interação com o sistema.
 
-**⚙️ Backend (Node.js + Sequelize)**  
-API responsável pelas regras de negócio e comunicação com o banco de dados.
+**⚙️ Backend ([Node.js](https://nodejs.org/) + [Sequelize](https://sequelize.org/))** API responsável pelas regras de negócio e comunicação com o banco de dados.
 
-**🗄 Banco de Dados (MySQL)**  
-Responsável por armazenar os dados da aplicação.
+**🗄 Banco de Dados ([MySQL](https://www.mysql.com/))** Responsável por armazenar os dados da aplicação.
 
 ### Fluxo da aplicação
 
