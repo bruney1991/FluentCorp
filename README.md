@@ -10,7 +10,18 @@
 💻 **Descrição:** Aplicativo de aprendizado de idiomas desenvolvido como projeto acadêmico no **SENAC**.
 
 🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
-   
+
+## ✨ $\color{purple}{\text{Funcionalidades}}$
+
+O **Fluent Corp** foi projetado para oferecer uma experiência de aprendizado fluida e integrada, unindo uma interface moderna a um backend:
+
+* 🔐 **Autenticação de Usuários:** Sistema completo de cadastro e login, com armazenamento seguro de credenciais no banco de dados.
+* 📚 **Trilhas de Idiomas Corporativos:** Acesso a módulos de estudo com foco em vocabulário de negócios, reuniões e apresentações.
+* 🚀 **Consumo de API REST:** Frontend em Flutter totalmente integrado ao backend Node.js para carregamento dinâmico de conteúdos.
+* 🗄️ **Persistência de Dados (ORM):** Gerenciamento eficiente de informações do usuário e progresso através do Sequelize e MySQL.
+* 📱 **Interface Responsiva:** Design moderno em Flutter, otimizado para garantir a melhor experiência do usuário (UX).
+* ⚙️ **Arquitetura Escalável:** Estrutura de pastas organizada seguindo as melhores práticas de desenvolvimento Full-Stack.
+
 
 ## 🛠️ $\color{purple}{\text{Projeto Node.js + Sequelize + Flutter}}$
 
