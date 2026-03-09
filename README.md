@@ -11,10 +11,17 @@
 
 🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
 
+### 📱 Preview da Aplicação
+
 <div align="center">
-  <h3>📱 Demonstração do Fluent Corp</h3>
-  <img src="./docs/images/app_demo_final.gif" width="300">
+  <img src="https://i.imgur.com/tN8jmRi.gif" 
+       alt="Demo Fluent Corp" 
+       width="300" 
+       style="max-width:100%; height:auto; display:block;">
 </div>
+
+Clique para assistir ao vídeo completo:  
+[▶️ Ver demonstração no YouTube](https://www.youtube.com/shorts/iFsvgexkvhI)
 
 ## ✨ $\color{purple}{\text{Funcionalidades}}$
 
