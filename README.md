@@ -14,7 +14,7 @@
 <div align="center">
   <h3>📱 Demonstração do Fluent Corp</h3>
   
-  <img src="./docs/images/aprgif.gif" width="300" alt="App Demo">
+  <img src="./docs/images/demoapp.gif" width="300" alt="App Demo">
   <br><br>
   <a href="https://www.youtube.com/shorts/iFsvgexkvhI">
     <strong>Clique para assistir ao vídeo completo:</strong>
