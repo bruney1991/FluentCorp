@@ -11,6 +11,11 @@
 
 🔗 [Veja o landing page online](https://bruney1991.github.io/FluentCorp/)
 
+<div align="center">
+  <h3>📱 Preview da Aplicação</h3>
+  <img src="./docs/images/preview.gif" alt="Demonstração do Fluent Corp" width="300">
+</div>
+
 ## ✨ $\color{purple}{\text{Funcionalidades}}$
 
 O **Fluent Corp** foi projetado para oferecer uma experiência de aprendizado fluida e integrada, unindo uma interface moderna a um backend:
