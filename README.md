@@ -13,7 +13,7 @@
 
 <div align="center">
   <h3>📱 Preview da Aplicação</h3>
-  <img src="./docs/images/preview.gif" alt="Demonstração do Fluent Corp" width="300">
+  <img src="./docs/images/app_demo.gif" alt="Demonstração do Fluent Corp" width="300">
 </div>
 
 ## ✨ $\color{purple}{\text{Funcionalidades}}$
