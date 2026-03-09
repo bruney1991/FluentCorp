@@ -13,11 +13,17 @@
 
 <div align="center">
   <h3>📱 Demonstração do Fluent Corp</h3>
+  
   <img src="./docs/images/aprgif.gif" width="300" alt="App Demo">
+  <br><br>
+  <a href="https://www.youtube.com/shorts/iFsvgexkvhI">
+    <strong>Clique para assistir ao vídeo completo:</strong>
+  </a>
+  <br><br>
+  <a href="https://www.youtube.com/shorts/iFsvgexkvhI">
+    <img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Ver demonstração no YouTube">
+  </a>
 </div>
-
-Clique para assistir ao vídeo completo:  
-[▶️ Ver demonstração no YouTube](https://www.youtube.com/shorts/iFsvgexkvhI)
 
 ## ✨ $\color{purple}{\text{Funcionalidades}}$
 
